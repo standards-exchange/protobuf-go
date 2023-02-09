@@ -347,11 +347,11 @@ const (
 	RT000ZR69_Transaction_BBGID RT000ZR69_Transaction_ShareClassIdentifierTypes = 6
 	// Reuters RIC - Reuters instrument code
 	RT000ZR69_Transaction_RIC RT000ZR69_Transaction_ShareClassIdentifierTypes = 7
-	// FIGI - Financial_Instrument Global Identifier
+	// FIGI - (Financial Instrument Global Identifier). To look up the FIGI navigate to https://www.openfigi.com/.
 	RT000ZR69_Transaction_FIGI RT000ZR69_Transaction_ShareClassIdentifierTypes = 8
 	// LEI - Legal Entity Identifier
 	RT000ZR69_Transaction_LEI RT000ZR69_Transaction_ShareClassIdentifierTypes = 9
-	// PermID - Refinitiv Permanent Identifiers
+	// PermID - (Refinitiv Permanent Identifier). To look up the PermID navigate to https://permid.org/
 	RT000ZR69_Transaction_PERM_ID RT000ZR69_Transaction_ShareClassIdentifierTypes = 10
 )
 
