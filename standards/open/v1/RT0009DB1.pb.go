@@ -830,7 +830,7 @@ type RT0009DB1_Organisation struct {
 	// Requests regarding issues related to functioning of fund
 	FundReceivedInvestorComplaintDuringYear YesNo `protobuf:"varint,34,opt,name=fund_received_investor_complaint_during_year,json=fundReceivedInvestorComplaintDuringYear,proto3,enum=standards.open.v1.YesNo" json:"fund_received_investor_complaint_during_year,omitempty"`
 	// If the answer to fund_received_investor_complaint_during_year is YES, number
-	FundReceivedInvestorComplaintDuringYearNumber int64 `protobuf:"varint,35,opt,name=fund_received_investor_complaint_during_year_number,json=fundReceivedInvestorComplaintDuringYearNumber,proto3" json:"fund_received_investor_complaint_during_year_number,omitempty"`
+	FundReceivedInvestorComplaintDuringYearNumber int32 `protobuf:"varint,35,opt,name=fund_received_investor_complaint_during_year_number,json=fundReceivedInvestorComplaintDuringYearNumber,proto3" json:"fund_received_investor_complaint_during_year_number,omitempty"`
 	// If the answer to fund_received_investor_complaint_during_year is YES, material?
 	FundReceivedInvestorComplaintDuringYearMateriality YesNo `protobuf:"varint,36,opt,name=fund_received_investor_complaint_during_year_materiality,json=fundReceivedInvestorComplaintDuringYearMateriality,proto3,enum=standards.open.v1.YesNo" json:"fund_received_investor_complaint_during_year_materiality,omitempty"`
 	// If the answer to fund_received_investor_complaint_during_year_materiality is YES, explain
@@ -1088,7 +1088,7 @@ func (x *RT0009DB1_Organisation) GetFundReceivedInvestorComplaintDuringYear() Ye
 	return YesNo_NA
 }
 
-func (x *RT0009DB1_Organisation) GetFundReceivedInvestorComplaintDuringYearNumber() int64 {
+func (x *RT0009DB1_Organisation) GetFundReceivedInvestorComplaintDuringYearNumber() int32 {
 	if x != nil {
 		return x.FundReceivedInvestorComplaintDuringYearNumber
 	}
@@ -3154,7 +3154,7 @@ var file_standards_open_v1_RT0009DB1_proto_rawDesc = []byte{
 	0x0a, 0x33, 0x66, 0x75, 0x6e, 0x64, 0x5f, 0x72, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65, 0x64, 0x5f,
 	0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x5f, 0x63, 0x6f, 0x6d, 0x70, 0x6c, 0x61, 0x69,
 	0x6e, 0x74, 0x5f, 0x64, 0x75, 0x72, 0x69, 0x6e, 0x67, 0x5f, 0x79, 0x65, 0x61, 0x72, 0x5f, 0x6e,
-	0x75, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x23, 0x20, 0x01, 0x28, 0x03, 0x42, 0x97, 0x01, 0x8a, 0x97,
+	0x75, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x23, 0x20, 0x01, 0x28, 0x05, 0x42, 0x97, 0x01, 0x8a, 0x97,
 	0x22, 0x92, 0x01, 0x0a, 0x30, 0x49, 0x66, 0x20, 0x74, 0x68, 0x65, 0x20, 0x61, 0x6e, 0x73, 0x77,
 	0x65, 0x72, 0x20, 0x74, 0x6f, 0x20, 0x51, 0x31, 0x31, 0x20, 0x69, 0x73, 0x20, 0x59, 0x45, 0x53,
 	0x2c, 0x20, 0x69, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x65, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6e,
