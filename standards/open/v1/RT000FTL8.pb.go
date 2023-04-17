@@ -428,22 +428,22 @@ type RT000FTL8 struct {
 
 	// Overview of the Fund Accounting Monthly KPI & MI Report
 	Overview *RT000FTL8_Overview `protobuf:"bytes,2,opt,name=overview,proto3" json:"overview,omitempty"`
-	// KPIs & key quantitative metrics for the current and preceding 12 periods
+	// KPIs & other key quantitative metrics for the current and preceding 13 periods
 	Metrics *RT000FTL8_Metrics `protobuf:"bytes,20,opt,name=metrics,proto3" json:"metrics,omitempty"`
 	// Time series of historic month-end AUM data
-	// Convention is to provide 12 months of history
+	// Convention is to provide 13 months of history
 	AssetsUnderManagementMonthly []*RT000FTL8_AssetsUnderManagement `protobuf:"bytes,51,rep,name=assets_under_management_monthly,json=assetsUnderManagementMonthly,proto3" json:"assets_under_management_monthly,omitempty"`
 	// Last 13 months of NAV Calculation Errors
 	NavCalculationErrors []*RT000FTL8_NAVCalculationErrorInformation `protobuf:"bytes,52,rep,name=nav_calculation_errors,json=navCalculationErrors,proto3" json:"nav_calculation_errors,omitempty"`
-	// Recent instrument pricing errors. Convention is to provide 12 months of history.
+	// Recent instrument pricing errors. Convention is to provide 13 months of history.
 	SecurityPricingErrors []*RT000FTL8_SecurityPricingError `protobuf:"bytes,53,rep,name=security_pricing_errors,json=securityPricingErrors,proto3" json:"security_pricing_errors,omitempty"`
-	// Stale prices as of effective date
+	// Stale prices as of the end of the reporting month
 	StaleSecurities []*RT000FTL8_StaleSecurity `protobuf:"bytes,54,rep,name=stale_securities,json=staleSecurities,proto3" json:"stale_securities,omitempty"`
-	// Recent Stock Breaks greater than 5 days. Convention is to provide 12 months of history.
+	// Recent Stock Breaks greater than 5 days. Convention is to provide 13 months of history.
 	StockBreaks []*RT000FTL8_StockBreak `protobuf:"bytes,55,rep,name=stock_breaks,json=stockBreaks,proto3" json:"stock_breaks,omitempty"`
-	// Recent Cash Breaks greater than 5 days. Convention is to provide 12 months of history.
+	// Recent Cash Breaks greater than 5 days. Convention is to provide 13 months of history.
 	CashBreaks []*RT000FTL8_CashBreak `protobuf:"bytes,56,rep,name=cash_breaks,json=cashBreaks,proto3" json:"cash_breaks,omitempty"`
-	// The timeseries of TERs per share class. Convention is to provide 12 months of history.
+	// The timeseries of TERs per share class. Convention is to provide 13 months of history.
 	TotalExpenseRatios []*RT000FTL8_TotalExpenseRatio `protobuf:"bytes,57,rep,name=total_expense_ratios,json=totalExpenseRatios,proto3" json:"total_expense_ratios,omitempty"`
 	// Recent invoices paid. Convention is to provide 6 months of history.
 	RecentInvoices []*RT000FTL8_Invoice `protobuf:"bytes,58,rep,name=recent_invoices,json=recentInvoices,proto3" json:"recent_invoices,omitempty"`
@@ -1008,7 +1008,7 @@ type RT000FTL8_NAVCalculationErrorInformation struct {
 	// Remediation
 	Remediation string `protobuf:"bytes,7,opt,name=remediation,proto3" json:"remediation,omitempty"`
 	// Other Comments
-	Comments []string `protobuf:"bytes,8,rep,name=comments,proto3" json:"comments,omitempty"`
+	Comments string `protobuf:"bytes,8,opt,name=comments,proto3" json:"comments,omitempty"`
 }
 
 func (x *RT000FTL8_NAVCalculationErrorInformation) Reset() {
@@ -1085,11 +1085,11 @@ func (x *RT000FTL8_NAVCalculationErrorInformation) GetRemediation() string {
 	return ""
 }
 
-func (x *RT000FTL8_NAVCalculationErrorInformation) GetComments() []string {
+func (x *RT000FTL8_NAVCalculationErrorInformation) GetComments() string {
 	if x != nil {
 		return x.Comments
 	}
-	return nil
+	return ""
 }
 
 // Definition of a pricing error occurred in the pricing of a share class
@@ -2231,7 +2231,7 @@ var file_standards_open_v1_RT000FTL8_proto_rawDesc = []byte{
 	0x09, 0x52, 0x05, 0x63, 0x61, 0x75, 0x73, 0x65, 0x12, 0x20, 0x0a, 0x0b, 0x72, 0x65, 0x6d, 0x65,
 	0x64, 0x69, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x07, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x72,
 	0x65, 0x6d, 0x65, 0x64, 0x69, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x1a, 0x0a, 0x08, 0x63, 0x6f,
-	0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x18, 0x08, 0x20, 0x03, 0x28, 0x09, 0x52, 0x08, 0x63, 0x6f,
+	0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x18, 0x08, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x63, 0x6f,
 	0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x1a, 0x96, 0x05, 0x0a, 0x14, 0x53, 0x65, 0x63, 0x75, 0x72,
 	0x69, 0x74, 0x79, 0x50, 0x72, 0x69, 0x63, 0x69, 0x6e, 0x67, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x12,
 	0x38, 0x0a, 0x0e, 0x65, 0x66, 0x66, 0x65, 0x63, 0x74, 0x69, 0x76, 0x65, 0x5f, 0x64, 0x61, 0x74,
