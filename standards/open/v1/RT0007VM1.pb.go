@@ -756,7 +756,7 @@ type RT0007VM1_Payload struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SfdrPreContractualReport *RT0007VM1_SFDRPrecontractualReport `protobuf:"bytes,1,opt,name=sfdr_pre_contractual_report,json=sfdrPrecontractualReport,proto3" json:"sfdr_pre_contractual_report,omitempty"`
+	SfdrPreContractualReport *RT0007VM1_SFDRPreContractualReport `protobuf:"bytes,1,opt,name=sfdr_pre_contractual_report,json=sfdrPreContractualReport,proto3" json:"sfdr_pre_contractual_report,omitempty"`
 }
 
 func (x *RT0007VM1_Payload) Reset() {
@@ -791,15 +791,15 @@ func (*RT0007VM1_Payload) Descriptor() ([]byte, []int) {
 	return file_standards_open_v1_RT0007VM1_proto_rawDescGZIP(), []int{0, 1}
 }
 
-func (x *RT0007VM1_Payload) GetSfdrPreContractualReport() *RT0007VM1_SFDRPrecontractualReport {
+func (x *RT0007VM1_Payload) GetSfdrPreContractualReport() *RT0007VM1_SFDRPreContractualReport {
 	if x != nil {
 		return x.SfdrPreContractualReport
 	}
 	return nil
 }
 
-// The SFDR Precontractual Report
-type RT0007VM1_SFDRPrecontractualReport struct {
+// The SFDR PreContractual Report
+type RT0007VM1_SFDRPreContractualReport struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -814,8 +814,8 @@ type RT0007VM1_SFDRPrecontractualReport struct {
 	OtherSubfunds []*RT0007VM1_OtherSubfund `protobuf:"bytes,4,rep,name=other_subfunds,json=otherSubfunds,proto3" json:"other_subfunds,omitempty"`
 }
 
-func (x *RT0007VM1_SFDRPrecontractualReport) Reset() {
-	*x = RT0007VM1_SFDRPrecontractualReport{}
+func (x *RT0007VM1_SFDRPreContractualReport) Reset() {
+	*x = RT0007VM1_SFDRPreContractualReport{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_standards_open_v1_RT0007VM1_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -823,13 +823,13 @@ func (x *RT0007VM1_SFDRPrecontractualReport) Reset() {
 	}
 }
 
-func (x *RT0007VM1_SFDRPrecontractualReport) String() string {
+func (x *RT0007VM1_SFDRPreContractualReport) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*RT0007VM1_SFDRPrecontractualReport) ProtoMessage() {}
+func (*RT0007VM1_SFDRPreContractualReport) ProtoMessage() {}
 
-func (x *RT0007VM1_SFDRPrecontractualReport) ProtoReflect() protoreflect.Message {
+func (x *RT0007VM1_SFDRPreContractualReport) ProtoReflect() protoreflect.Message {
 	mi := &file_standards_open_v1_RT0007VM1_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -841,33 +841,33 @@ func (x *RT0007VM1_SFDRPrecontractualReport) ProtoReflect() protoreflect.Message
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use RT0007VM1_SFDRPrecontractualReport.ProtoReflect.Descriptor instead.
-func (*RT0007VM1_SFDRPrecontractualReport) Descriptor() ([]byte, []int) {
+// Deprecated: Use RT0007VM1_SFDRPreContractualReport.ProtoReflect.Descriptor instead.
+func (*RT0007VM1_SFDRPreContractualReport) Descriptor() ([]byte, []int) {
 	return file_standards_open_v1_RT0007VM1_proto_rawDescGZIP(), []int{0, 2}
 }
 
-func (x *RT0007VM1_SFDRPrecontractualReport) GetEntityCssfCode() string {
+func (x *RT0007VM1_SFDRPreContractualReport) GetEntityCssfCode() string {
 	if x != nil {
 		return x.EntityCssfCode
 	}
 	return ""
 }
 
-func (x *RT0007VM1_SFDRPrecontractualReport) GetArticle8Subfunds() []*RT0007VM1_Article8Subfund {
+func (x *RT0007VM1_SFDRPreContractualReport) GetArticle8Subfunds() []*RT0007VM1_Article8Subfund {
 	if x != nil {
 		return x.Article8Subfunds
 	}
 	return nil
 }
 
-func (x *RT0007VM1_SFDRPrecontractualReport) GetArticle9Subfunds() []*RT0007VM1_Article9Subfund {
+func (x *RT0007VM1_SFDRPreContractualReport) GetArticle9Subfunds() []*RT0007VM1_Article9Subfund {
 	if x != nil {
 		return x.Article9Subfunds
 	}
 	return nil
 }
 
-func (x *RT0007VM1_SFDRPrecontractualReport) GetOtherSubfunds() []*RT0007VM1_OtherSubfund {
+func (x *RT0007VM1_SFDRPreContractualReport) GetOtherSubfunds() []*RT0007VM1_OtherSubfund {
 	if x != nil {
 		return x.OtherSubfunds
 	}
@@ -2265,15 +2265,15 @@ var file_standards_open_v1_RT0007VM1_proto_rawDesc = []byte{
 	0x72, 0x61, 0x63, 0x74, 0x75, 0x61, 0x6c, 0x5f, 0x72, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x18, 0x01,
 	0x20, 0x01, 0x28, 0x0b, 0x32, 0x35, 0x2e, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73,
 	0x2e, 0x6f, 0x70, 0x65, 0x6e, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x54, 0x30, 0x30, 0x30, 0x37, 0x56,
-	0x4d, 0x31, 0x2e, 0x53, 0x46, 0x44, 0x52, 0x50, 0x72, 0x65, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61,
+	0x4d, 0x31, 0x2e, 0x53, 0x46, 0x44, 0x52, 0x50, 0x72, 0x65, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61,
 	0x63, 0x74, 0x75, 0x61, 0x6c, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x42, 0x3e, 0x8a, 0x97, 0x22,
 	0x3a, 0x0a, 0x38, 0x54, 0x68, 0x65, 0x20, 0x71, 0x75, 0x65, 0x73, 0x74, 0x69, 0x6f, 0x6e, 0x73,
 	0x20, 0x74, 0x6f, 0x20, 0x62, 0x65, 0x20, 0x61, 0x6e, 0x73, 0x77, 0x65, 0x72, 0x65, 0x64, 0x20,
 	0x66, 0x6f, 0x72, 0x20, 0x74, 0x68, 0x65, 0x20, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x20, 0x61,
 	0x6e, 0x64, 0x20, 0x73, 0x75, 0x62, 0x66, 0x75, 0x6e, 0x64, 0x73, 0x52, 0x18, 0x73, 0x66, 0x64,
-	0x72, 0x50, 0x72, 0x65, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x75, 0x61, 0x6c, 0x52,
+	0x72, 0x50, 0x72, 0x65, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x75, 0x61, 0x6c, 0x52,
 	0x65, 0x70, 0x6f, 0x72, 0x74, 0x1a, 0x87, 0x05, 0x0a, 0x18, 0x53, 0x46, 0x44, 0x52, 0x50, 0x72,
-	0x65, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x75, 0x61, 0x6c, 0x52, 0x65, 0x70, 0x6f,
+	0x65, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x75, 0x61, 0x6c, 0x52, 0x65, 0x70, 0x6f,
 	0x72, 0x74, 0x12, 0x47, 0x0a, 0x10, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x5f, 0x63, 0x73, 0x73,
 	0x66, 0x5f, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x42, 0x1d, 0x8a, 0x97,
 	0x22, 0x19, 0x0a, 0x17, 0x43, 0x53, 0x53, 0x46, 0x20, 0x63, 0x6f, 0x64, 0x65, 0x20, 0x6f, 0x66,
@@ -4742,7 +4742,7 @@ var file_standards_open_v1_RT0007VM1_proto_goTypes = []interface{}{
 	(*RT0007VM1Batch)(nil),                     // 10: standards.open.v1.RT0007VM1_batch
 	(*RT0007VM1_Header)(nil),                   // 11: standards.open.v1.RT0007VM1.Header
 	(*RT0007VM1_Payload)(nil),                  // 12: standards.open.v1.RT0007VM1.Payload
-	(*RT0007VM1_SFDRPrecontractualReport)(nil), // 13: standards.open.v1.RT0007VM1.SFDRPrecontractualReport
+	(*RT0007VM1_SFDRPreContractualReport)(nil), // 13: standards.open.v1.RT0007VM1.SFDRPreContractualReport
 	(*RT0007VM1_Article8Subfund)(nil),          // 14: standards.open.v1.RT0007VM1.Article8Subfund
 	(*RT0007VM1_Article9Subfund)(nil),          // 15: standards.open.v1.RT0007VM1.Article9Subfund
 	(*RT0007VM1_OtherSubfund)(nil),             // 16: standards.open.v1.RT0007VM1.OtherSubfund
@@ -4756,10 +4756,10 @@ var file_standards_open_v1_RT0007VM1_proto_depIdxs = []int32{
 	0,  // 3: standards.open.v1.RT0007VM1.Header.report_type:type_name -> standards.open.v1.RT0007VM1.Header.ReportType
 	1,  // 4: standards.open.v1.RT0007VM1.Header.version:type_name -> standards.open.v1.RT0007VM1.Header.Version
 	17, // 5: standards.open.v1.RT0007VM1.Header.creation_timestamp:type_name -> google.protobuf.Timestamp
-	13, // 6: standards.open.v1.RT0007VM1.Payload.sfdr_pre_contractual_report:type_name -> standards.open.v1.RT0007VM1.SFDRPrecontractualReport
-	14, // 7: standards.open.v1.RT0007VM1.SFDRPrecontractualReport.article8_subfunds:type_name -> standards.open.v1.RT0007VM1.Article8Subfund
-	15, // 8: standards.open.v1.RT0007VM1.SFDRPrecontractualReport.article9_subfunds:type_name -> standards.open.v1.RT0007VM1.Article9Subfund
-	16, // 9: standards.open.v1.RT0007VM1.SFDRPrecontractualReport.other_subfunds:type_name -> standards.open.v1.RT0007VM1.OtherSubfund
+	13, // 6: standards.open.v1.RT0007VM1.Payload.sfdr_pre_contractual_report:type_name -> standards.open.v1.RT0007VM1.SFDRPreContractualReport
+	14, // 7: standards.open.v1.RT0007VM1.SFDRPreContractualReport.article8_subfunds:type_name -> standards.open.v1.RT0007VM1.Article8Subfund
+	15, // 8: standards.open.v1.RT0007VM1.SFDRPreContractualReport.article9_subfunds:type_name -> standards.open.v1.RT0007VM1.Article9Subfund
+	16, // 9: standards.open.v1.RT0007VM1.SFDRPreContractualReport.other_subfunds:type_name -> standards.open.v1.RT0007VM1.OtherSubfund
 	18, // 10: standards.open.v1.RT0007VM1.Article8Subfund.sustainable_investments_indicator:type_name -> standards.open.v1.YesNo
 	18, // 11: standards.open.v1.RT0007VM1.Article8Subfund.environmental_objective_taxonomy_indicator:type_name -> standards.open.v1.YesNo
 	18, // 12: standards.open.v1.RT0007VM1.Article8Subfund.environmental_objective_no_taxonomy_indicator:type_name -> standards.open.v1.YesNo
@@ -4890,7 +4890,7 @@ func file_standards_open_v1_RT0007VM1_proto_init() {
 			}
 		}
 		file_standards_open_v1_RT0007VM1_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RT0007VM1_SFDRPrecontractualReport); i {
+			switch v := v.(*RT0007VM1_SFDRPreContractualReport); i {
 			case 0:
 				return &v.state
 			case 1:
