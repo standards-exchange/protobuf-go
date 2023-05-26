@@ -1285,7 +1285,10 @@ type RT000ZR69_MonthlyRAGMetric struct {
 	MetricId RT000ZR69_MonthlyRAGMetric_MetricID `protobuf:"varint,8,opt,name=metric_id,json=metricId,proto3,enum=standards.open.v1.RT000ZR69_MonthlyRAGMetric_MetricID" json:"metric_id,omitempty"`
 	// Enumeration for how to interpret the metric value
 	MetricType RT000ZR69_MonthlyRAGMetric_MetricType `protobuf:"varint,9,opt,name=metric_type,json=metricType,proto3,enum=standards.open.v1.RT000ZR69_MonthlyRAGMetric_MetricType" json:"metric_type,omitempty"`
-	// If the metric type is "MONEY" then a 3-letter currency code defined in ISO 4217 must be provided.
+	// The country code is required to comply with the 3-letter ISO 3166-1 alpha-3 standard.
+	// The ISO 3166-1 alpha-3 is a set of 3-letter country codes to represent countries and dependent areas.
+	// Make sure the provided country code is in uppercase.
+	// Example: 'USA' for the United States, 'GBR' for Great Britain, 'DEU' for Germany, etc.
 	CurrencyCode string `protobuf:"bytes,10,opt,name=currency_code,json=currencyCode,proto3" json:"currency_code,omitempty"`
 	// The value of the metric
 	Metric float64 `protobuf:"fixed64,11,opt,name=metric,proto3" json:"metric,omitempty"`
