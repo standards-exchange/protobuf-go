@@ -140,56 +140,56 @@ func (x *RT000Z9D4) GetHoldings() []*RT000Z9D4_Holding {
 	return nil
 }
 
-// Defining a single record / row within excel
+// Defining a single record / row within excel. First holding appears on row 13
 type RT000Z9D4_Holding struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// The month end date on which the portfolio data was extracted. Must be the last day of the month
+	// The month end date on which the portfolio data was extracted. Must be the last day of the month (Column A)
 	PortfolioDate *date.Date `protobuf:"bytes,1,opt,name=portfolio_date,json=portfolioDate,proto3" json:"portfolio_date,omitempty"`
-	// Unique portfolio identifier. Can be an internal code unique to each fund
+	// Unique portfolio identifier. Can be an internal code unique to each fund (Column B)
 	PortfolioId string `protobuf:"bytes,2,opt,name=portfolio_id,json=portfolioId,proto3" json:"portfolio_id,omitempty"`
-	// Fund name
+	// Fund name (Column C)
 	Fund string `protobuf:"bytes,3,opt,name=fund,proto3" json:"fund,omitempty"`
-	// Unique security identifier. Can use any of the following identifiers: ISIN, CUSIP, Sedol, Exchange ticker, Bloomberg ticker, Custom identifier
+	// Unique security identifier. Can use any of the following identifiers: ISIN, CUSIP, Sedol, Exchange ticker, Bloomberg ticker, Custom identifier (Column D)
 	SecurityId *RT000Z9D4_Holding_SecurityId `protobuf:"bytes,4,opt,name=security_id,json=securityId,proto3" json:"security_id,omitempty"`
-	// Security description
+	// Security description (Column E)
 	SecurityDescription string `protobuf:"bytes,5,opt,name=security_description,json=securityDescription,proto3" json:"security_description,omitempty"`
-	// Shares for equity holdings, par value for fixed-income holdings or number of contracts for derivative holdings
+	// Shares for equity holdings, par value for fixed-income holdings or number of contracts for derivative holdings (Column F)
 	SharesParValue float64 `protobuf:"fixed64,6,opt,name=shares_par_value,json=sharesParValue,proto3" json:"shares_par_value,omitempty"`
-	// Base market value
+	// Base market value (Column G)
 	BaseMarketValue float64 `protobuf:"fixed64,7,opt,name=base_market_value,json=baseMarketValue,proto3" json:"base_market_value,omitempty"`
-	// Coupon rate for fixed income instrument (expressed as a percentage)
+	// Coupon rate for fixed income instrument (expressed as a percentage) (Column H)
 	CouponRate float64 `protobuf:"fixed64,8,opt,name=coupon_rate,json=couponRate,proto3" json:"coupon_rate,omitempty"`
-	// Maturity/expiration date
+	// Maturity/expiration date (Column I)
 	MaturityDate *date.Date `protobuf:"bytes,9,opt,name=maturity_date,json=maturityDate,proto3" json:"maturity_date,omitempty"`
-	// Currency in which all the portfolio holding's market values are reported (ISO 4217 currency code)
+	// Currency in which all the portfolio holding's market values are reported (ISO 4217 currency code) (Column J)
 	PortfolioBaseCurrency string `protobuf:"bytes,10,opt,name=portfolio_base_currency,json=portfolioBaseCurrency,proto3" json:"portfolio_base_currency,omitempty"`
-	// Market value expressed in the local currency of the holding
+	// Market value expressed in the local currency of the holding (Column K)
 	LocalMarketValue float64 `protobuf:"fixed64,11,opt,name=local_market_value,json=localMarketValue,proto3" json:"local_market_value,omitempty"`
-	// The currency in which the holding was purchased (ISO 4217 currency code)
+	// The currency in which the holding was purchased (ISO 4217 currency code) (Column L)
 	LocalCurrency string `protobuf:"bytes,12,opt,name=local_currency,json=localCurrency,proto3" json:"local_currency,omitempty"`
-	// The original value of cost of an asset
+	// The original value of cost of an asset (Column M)
 	CostBasis float64 `protobuf:"fixed64,13,opt,name=cost_basis,json=costBasis,proto3" json:"cost_basis,omitempty"`
-	// The security's domicile (ISO 3166 country code)
+	// The security's domicile (ISO 3166 country code) (Column N)
 	RegionCode string `protobuf:"bytes,14,opt,name=region_code,json=regionCode,proto3" json:"region_code,omitempty"`
-	// Total Net Asset, i.e. fund aum
+	// Total Net Asset, i.e. fund aum (Column O)
 	Tna float64 `protobuf:"fixed64,15,opt,name=tna,proto3" json:"tna,omitempty"`
-	// Money not invested in a fund
+	// Money not invested in a fund (Column P)
 	Cash float64 `protobuf:"fixed64,16,opt,name=cash,proto3" json:"cash,omitempty"`
-	// The weight of each position/security held in the portfolio expressed in percentage e.g. 0.56 = 56%
+	// The weight of each position/security held in the portfolio expressed in percentage e.g. 0.56 = 56% (Column Q)
 	// Very useful for validation
 	Percentage float64 `protobuf:"fixed64,17,opt,name=percentage,proto3" json:"percentage,omitempty"`
-	// Coupon or interest accrued but not paid to bondholders
+	// Coupon or interest accrued but not paid to bondholders (Column R)
 	AccruedInterest float64 `protobuf:"fixed64,18,opt,name=accrued_interest,json=accruedInterest,proto3" json:"accrued_interest,omitempty"`
-	// Financial classification for each security according to the their attributes
+	// Financial classification for each security according to the their attributes (Column S)
 	SecurityTypes string `protobuf:"bytes,19,opt,name=security_types,json=securityTypes,proto3" json:"security_types,omitempty"`
-	// Local asset type code for South Africa
+	// Local asset type code for South Africa (Column T)
 	LocalAssetType string `protobuf:"bytes,20,opt,name=local_asset_type,json=localAssetType,proto3" json:"local_asset_type,omitempty"`
-	// Credit quality (India)
+	// Credit quality (India) (Column U)
 	CreditQuality string `protobuf:"bytes,21,opt,name=credit_quality,json=creditQuality,proto3" json:"credit_quality,omitempty"`
-	// Market Identifier Code (MIC): exchange code of which exchange the holdings traded. (ISO 10383)
+	// Market Identifier Code (MIC): exchange code of which exchange the holdings traded. (ISO 10383) (Column V)
 	MarketIdCode string `protobuf:"bytes,22,opt,name=market_id_code,json=marketIdCode,proto3" json:"market_id_code,omitempty"`
 }
 
