@@ -86,9 +86,9 @@ const (
 	RT000ZR69_Metric_PHONE_QUERY_TIMELINESS_RATE RT000ZR69_Metric_MetricID = 25
 	// Number of system issues that occurred during the month.
 	RT000ZR69_Metric_SYSTEM_ISSUES RT000ZR69_Metric_MetricID = 26
-	// The self-assessment rating of the provider (typically on a scale of 1 - below expectations to 5 - well above expectations)
+	// The self-assessment rating of the provider (typically on a scale of 1 - below expectations to 9 - well above expectations)
 	RT000ZR69_Metric_PROVIDER_SELF_ASSESSMENT RT000ZR69_Metric_MetricID = 27
-	// The service assessment rating of the customer (typically on a scale of 1 - below expectations to 5 - well above expectations)
+	// The service assessment rating of the customer (typically on a scale of 1 - below expectations to 9 - well above expectations)
 	RT000ZR69_Metric_CUSTOMER_SERVICE_ASSESSMENT RT000ZR69_Metric_MetricID = 28
 	// The net asset value at the end of the period in reporting currency
 	RT000ZR69_Metric_NET_ASSET_VALUE_REPORTING_CURRENCY RT000ZR69_Metric_MetricID = 29
