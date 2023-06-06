@@ -93,9 +93,9 @@ const (
 	RT000FTL8_Metric_ANNUALIZED_TER RT000FTL8_Metric_MetricID = 26
 	// The annualized TER, year-to-date, as of the end of the reporting period
 	RT000FTL8_Metric_ANNUALIZED_YTD_TER RT000FTL8_Metric_MetricID = 27
-	// The self-assessment rating (typically on a scale of 1 - below expectations to 5 - well above expectations)
+	// The self-assessment rating (typically on a scale of 1 - below expectations to 9 - well above expectations)
 	RT000FTL8_Metric_PROVIDER_SELF_ASSESSMENT RT000FTL8_Metric_MetricID = 28
-	// The service assessment rating (typically on a scale of 1 - below expectations to 5 - well above expectations)
+	// The service assessment rating (typically on a scale of 1 - below expectations to 9 - well above expectations)
 	RT000FTL8_Metric_CUSTOMER_SERVICE_ASSESSMENT RT000FTL8_Metric_MetricID = 29
 	// The number of nav delays caused by pricing
 	RT000FTL8_Metric_NAV_DELAYS_PRICING RT000FTL8_Metric_MetricID = 30
