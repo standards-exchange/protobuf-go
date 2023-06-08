@@ -31,7 +31,7 @@ const (
 type RT0007VM1_YesNo int32
 
 const (
-	// No
+	// Not Applicable
 	RT0007VM1_YES_NO_NA_UNSPECIFIED RT0007VM1_YesNo = 0
 	// Yes
 	RT0007VM1_Y RT0007VM1_YesNo = 1
