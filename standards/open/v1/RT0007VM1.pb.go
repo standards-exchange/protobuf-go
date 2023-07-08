@@ -169,7 +169,7 @@ func (RT0007VM1_Header_Version) EnumDescriptor() ([]byte, []int) {
 type RT0007VM1_Article8Subfund_EAndSCharacteristic int32
 
 const (
-	RT0007VM1_Article8Subfund_E_AND_S_CHARACTERISTICS_UNSPECIFIED RT0007VM1_Article8Subfund_EAndSCharacteristic = 0  // Unspecified
+	RT0007VM1_Article8Subfund_E_AND_S_CHARACTERISTICS_UNSPECIFIED RT0007VM1_Article8Subfund_EAndSCharacteristic = 0  // Not Applicable
 	RT0007VM1_Article8Subfund_EREN                                RT0007VM1_Article8Subfund_EAndSCharacteristic = 1  // Environmental - renewable energy
 	RT0007VM1_Article8Subfund_ERMA                                RT0007VM1_Article8Subfund_EAndSCharacteristic = 2  // Environmental - raw materials
 	RT0007VM1_Article8Subfund_EWL                                 RT0007VM1_Article8Subfund_EAndSCharacteristic = 3  // Environmental - water and land
@@ -260,7 +260,7 @@ func (RT0007VM1_Article8Subfund_EAndSCharacteristic) EnumDescriptor() ([]byte, [
 type RT0007VM1_Article8Subfund_SustainableInvestmentObjective int32
 
 const (
-	RT0007VM1_Article8Subfund_SUSTAINABLE_INVESTMENT_OBJECTIVES_UNSPECIFIED RT0007VM1_Article8Subfund_SustainableInvestmentObjective = 0 // Unspecified
+	RT0007VM1_Article8Subfund_SUSTAINABLE_INVESTMENT_OBJECTIVES_UNSPECIFIED RT0007VM1_Article8Subfund_SustainableInvestmentObjective = 0 // Not Applicable
 	RT0007VM1_Article8Subfund_CCA                                           RT0007VM1_Article8Subfund_SustainableInvestmentObjective = 1 // Climate change adaptation
 	RT0007VM1_Article8Subfund_UPWM                                          RT0007VM1_Article8Subfund_SustainableInvestmentObjective = 2 // The sustainable use and protection of water and marine resources
 	RT0007VM1_Article8Subfund_TCE                                           RT0007VM1_Article8Subfund_SustainableInvestmentObjective = 3 // The transition to a circular economy
@@ -324,7 +324,7 @@ func (RT0007VM1_Article8Subfund_SustainableInvestmentObjective) EnumDescriptor()
 type RT0007VM1_Article8Subfund_InvestmentStrategy int32
 
 const (
-	RT0007VM1_Article8Subfund_INVESTMENT_STRATEGY_UNSPECIFIED RT0007VM1_Article8Subfund_InvestmentStrategy = 0 // UNSPECIFIED
+	RT0007VM1_Article8Subfund_INVESTMENT_STRATEGY_UNSPECIFIED RT0007VM1_Article8Subfund_InvestmentStrategy = 0 // Not Applicable
 	RT0007VM1_Article8Subfund_THE                             RT0007VM1_Article8Subfund_InvestmentStrategy = 1 // Thematic
 	RT0007VM1_Article8Subfund_ESGI                            RT0007VM1_Article8Subfund_InvestmentStrategy = 2 // ESG integration
 	RT0007VM1_Article8Subfund_ESGE                            RT0007VM1_Article8Subfund_InvestmentStrategy = 3 // ESG engagement
@@ -388,7 +388,7 @@ func (RT0007VM1_Article8Subfund_InvestmentStrategy) EnumDescriptor() ([]byte, []
 type RT0007VM1_Article8Subfund_TACalculationMethod int32
 
 const (
-	RT0007VM1_Article8Subfund_TA_CALCULATION_METHOD_UNSPECIFIED RT0007VM1_Article8Subfund_TACalculationMethod = 0 // UNSPECIFIED
+	RT0007VM1_Article8Subfund_TA_CALCULATION_METHOD_UNSPECIFIED RT0007VM1_Article8Subfund_TACalculationMethod = 0 // Not Applicable
 	RT0007VM1_Article8Subfund_CAPEX                             RT0007VM1_Article8Subfund_TACalculationMethod = 1 // Capital expenditure
 	RT0007VM1_Article8Subfund_OPEX                              RT0007VM1_Article8Subfund_TACalculationMethod = 2 // Operational expenditure
 	RT0007VM1_Article8Subfund_T                                 RT0007VM1_Article8Subfund_TACalculationMethod = 3 // TURNOVER
@@ -441,7 +441,7 @@ func (RT0007VM1_Article8Subfund_TACalculationMethod) EnumDescriptor() ([]byte, [
 type RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives int32
 
 const (
-	RT0007VM1_Article9Subfund_ENVIRONMENTAL_AND_SOCIAL_OBJECTIVES_UNSPECIFIED RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives = 0 // UNSPECIFIED
+	RT0007VM1_Article9Subfund_ENVIRONMENTAL_AND_SOCIAL_OBJECTIVES_UNSPECIFIED RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives = 0 // Not Applicable
 	RT0007VM1_Article9Subfund_CCA                                             RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives = 1 // Climate change adaptation
 	RT0007VM1_Article9Subfund_UPWM                                            RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives = 2 // The sustainable use and protection of water and marine resources
 	RT0007VM1_Article9Subfund_TCE                                             RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives = 3 // Transition to a circular economy
@@ -508,7 +508,7 @@ func (RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives) EnumDescriptor
 type RT0007VM1_Article9Subfund_InvestmentStrategy int32
 
 const (
-	RT0007VM1_Article9Subfund_INVESTMENT_STRATEGY_UNSPECIFIED RT0007VM1_Article9Subfund_InvestmentStrategy = 0 // UNSPECIFIED
+	RT0007VM1_Article9Subfund_INVESTMENT_STRATEGY_UNSPECIFIED RT0007VM1_Article9Subfund_InvestmentStrategy = 0 // Not Applicable
 	RT0007VM1_Article9Subfund_THE                             RT0007VM1_Article9Subfund_InvestmentStrategy = 1 // Thematic
 	RT0007VM1_Article9Subfund_ESGI                            RT0007VM1_Article9Subfund_InvestmentStrategy = 2 // ESG integration
 	RT0007VM1_Article9Subfund_ESGE                            RT0007VM1_Article9Subfund_InvestmentStrategy = 3 // ESG engagement
@@ -572,7 +572,7 @@ func (RT0007VM1_Article9Subfund_InvestmentStrategy) EnumDescriptor() ([]byte, []
 type RT0007VM1_Article9Subfund_TACalculationMethod int32
 
 const (
-	RT0007VM1_Article9Subfund_TA_CALCULATION_METHOD_UNSPECIFIED RT0007VM1_Article9Subfund_TACalculationMethod = 0 // UNSPECIFIED
+	RT0007VM1_Article9Subfund_TA_CALCULATION_METHOD_UNSPECIFIED RT0007VM1_Article9Subfund_TACalculationMethod = 0 // Not Applicable
 	RT0007VM1_Article9Subfund_CAPEX                             RT0007VM1_Article9Subfund_TACalculationMethod = 1 // Capital expenditure
 	RT0007VM1_Article9Subfund_OPEX                              RT0007VM1_Article9Subfund_TACalculationMethod = 2 // Operational expenditure
 	RT0007VM1_Article9Subfund_T                                 RT0007VM1_Article9Subfund_TACalculationMethod = 3 // TURNOVER
