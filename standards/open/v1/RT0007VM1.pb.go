@@ -83,6 +83,7 @@ func (RT0007VM1_YesNo) EnumDescriptor() ([]byte, []int) {
 type RT0007VM1_Header_ReportType int32
 
 const (
+	// SFDR_PRECONTRACTUAL
 	RT0007VM1_Header_SFDR_PRECONTRACTUAL RT0007VM1_Header_ReportType = 0
 )
 
@@ -126,6 +127,7 @@ func (RT0007VM1_Header_ReportType) EnumDescriptor() ([]byte, []int) {
 type RT0007VM1_Header_Version int32
 
 const (
+	// v1.0.0
 	RT0007VM1_Header_V1_0_0 RT0007VM1_Header_Version = 0
 )
 
