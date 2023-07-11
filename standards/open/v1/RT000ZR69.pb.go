@@ -64,9 +64,9 @@ const (
 	RT000ZR69_Metric_NUMBER_OF_UPHELD_COMPLAINTS RT000ZR69_Metric_MetricID = 14
 	// The total number of accounts
 	RT000ZR69_Metric_NUMBER_OF_ACCOUNTS RT000ZR69_Metric_MetricID = 15
-	// Total number of accounts with balances
+	// Total percentage of accounts with balances
 	RT000ZR69_Metric_PERCENTAGE_ACCOUNTS_WITH_BALANCES RT000ZR69_Metric_MetricID = 16
-	// The number of accounts in good order at the end of the reporting period
+	// The percentage of accounts in good order at the end of the reporting period
 	RT000ZR69_Metric_PERCENTAGE_ACCOUNTS_IN_GOOD_ORDER RT000ZR69_Metric_MetricID = 17
 	// The percentage of large trade reports sent within the agreed timeframe
 	RT000ZR69_Metric_INVESTOR_REPORTS_TIMELINESS RT000ZR69_Metric_MetricID = 18
