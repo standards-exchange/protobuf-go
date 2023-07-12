@@ -988,7 +988,7 @@ type RT0007VM1_Article8Subfund struct {
 	OtherSocialCharacteristicsDescription string `protobuf:"bytes,9,opt,name=other_social_characteristics_description,json=otherSocialCharacteristicsDescription,proto3" json:"other_social_characteristics_description,omitempty"`
 	// What are the objectives of the sustainable investments that the sub-fund partially intends to make?
 	// The field is required if the value of the field sustainableInvestmentsIndicator is Y
-	SustainableInvestmentsObjectives RT0007VM1_Article8Subfund_SustainableInvestmentObjective `protobuf:"varint,10,opt,name=sustainable_investments_objectives,json=sustainableInvestmentsObjectives,proto3,enum=standards.open.v1.RT0007VM1_Article8Subfund_SustainableInvestmentObjective" json:"sustainable_investments_objectives,omitempty"`
+	SustainableInvestmentsObjectives []RT0007VM1_Article8Subfund_SustainableInvestmentObjective `protobuf:"varint,10,rep,packed,name=sustainable_investments_objectives,json=sustainableInvestmentsObjectives,proto3,enum=standards.open.v1.RT0007VM1_Article8Subfund_SustainableInvestmentObjective" json:"sustainable_investments_objectives,omitempty"`
 	// Does the sub-fund consider principle adverse impacts on sustainability factors?
 	PrincipalAdverseImpactConsiderationIndicator RT0007VM1_YesNo `protobuf:"varint,11,opt,name=principal_adverse_impact_consideration_indicator,json=principalAdversImpactConsiderationIndicator,proto3,enum=standards.open.v1.RT0007VM1_YesNo" json:"principal_adverse_impact_consideration_indicator,omitempty"`
 	// What investment strategy does the sub-fund follow?
@@ -1224,11 +1224,11 @@ func (x *RT0007VM1_Article8Subfund) GetOtherSocialCharacteristicsDescription() s
 	return ""
 }
 
-func (x *RT0007VM1_Article8Subfund) GetSustainableInvestmentsObjectives() RT0007VM1_Article8Subfund_SustainableInvestmentObjective {
+func (x *RT0007VM1_Article8Subfund) GetSustainableInvestmentsObjectives() []RT0007VM1_Article8Subfund_SustainableInvestmentObjective {
 	if x != nil {
 		return x.SustainableInvestmentsObjectives
 	}
-	return RT0007VM1_Article8Subfund_SUSTAINABLE_INVESTMENT_OBJECTIVES_UNSPECIFIED
+	return nil
 }
 
 func (x *RT0007VM1_Article8Subfund) GetPrincipalAdverseImpactConsiderationIndicator() RT0007VM1_YesNo {
@@ -1604,8 +1604,8 @@ type RT0007VM1_Article9Subfund struct {
 	SocialObjectiveIndicator RT0007VM1_YesNo `protobuf:"varint,6,opt,name=social_objective_indicator,json=socialObjectiveIndicator,proto3,enum=standards.open.v1.RT0007VM1_YesNo" json:"social_objective_indicator,omitempty"`
 	// Minimum percentage of sustainable investments with a social objective
 	// The field is required if the value of the field socialObjectiveIndicator is Y
-	SustainableInvestmentsSocialMinimalProportion1 float64                                                    `protobuf:"fixed64,7,opt,name=sustainable_investments_social_minimal_proportion1,json=sustainableInvestmentsSocialMinimalProportion1,proto3" json:"sustainable_investments_social_minimal_proportion1,omitempty"`
-	EnvironmentalAndSocialObjectives               RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives `protobuf:"varint,8,opt,name=environmental_and_social_objectives,json=environmentalAndSocialObjectives,proto3,enum=standards.open.v1.RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives" json:"environmental_and_social_objectives,omitempty"`
+	SustainableInvestmentsSocialMinimalProportion1 float64                                                      `protobuf:"fixed64,7,opt,name=sustainable_investments_social_minimal_proportion1,json=sustainableInvestmentsSocialMinimalProportion1,proto3" json:"sustainable_investments_social_minimal_proportion1,omitempty"`
+	EnvironmentalAndSocialObjectives               []RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives `protobuf:"varint,8,rep,packed,name=environmental_and_social_objectives,json=environmentalAndSocialObjectives,proto3,enum=standards.open.v1.RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives" json:"environmental_and_social_objectives,omitempty"`
 	// Does the sub-fund consider principal adverse impacts on sustainability factors?
 	PrincipalAdverseImpactConsiderationIndicator RT0007VM1_YesNo `protobuf:"varint,9,opt,name=principal_adverse_impact_consideration_indicator,json=principalAdversImpactConsiderationIndicator,proto3,enum=standards.open.v1.RT0007VM1_YesNo" json:"principal_adverse_impact_consideration_indicator,omitempty"`
 	// What investment strategy does the sub-fund follow?
@@ -1824,11 +1824,11 @@ func (x *RT0007VM1_Article9Subfund) GetSustainableInvestmentsSocialMinimalPropor
 	return 0
 }
 
-func (x *RT0007VM1_Article9Subfund) GetEnvironmentalAndSocialObjectives() RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives {
+func (x *RT0007VM1_Article9Subfund) GetEnvironmentalAndSocialObjectives() []RT0007VM1_Article9Subfund_EnvironmentalAndSocialObjectives {
 	if x != nil {
 		return x.EnvironmentalAndSocialObjectives
 	}
-	return RT0007VM1_Article9Subfund_ENVIRONMENTAL_AND_SOCIAL_OBJECTIVES_UNSPECIFIED
+	return nil
 }
 
 func (x *RT0007VM1_Article9Subfund) GetPrincipalAdverseImpactConsiderationIndicator() RT0007VM1_YesNo {
@@ -2587,7 +2587,7 @@ var file_standards_open_v1_RT0007VM1_proto_rawDesc = []byte{
 	0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0xb5, 0x03, 0x0a, 0x22, 0x73,
 	0x75, 0x73, 0x74, 0x61, 0x69, 0x6e, 0x61, 0x62, 0x6c, 0x65, 0x5f, 0x69, 0x6e, 0x76, 0x65, 0x73,
 	0x74, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x69, 0x76, 0x65,
-	0x73, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x4b, 0x2e, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61,
+	0x73, 0x18, 0x0a, 0x20, 0x03, 0x28, 0x0e, 0x32, 0x4b, 0x2e, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61,
 	0x72, 0x64, 0x73, 0x2e, 0x6f, 0x70, 0x65, 0x6e, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x54, 0x30, 0x30,
 	0x30, 0x37, 0x56, 0x4d, 0x31, 0x2e, 0x41, 0x72, 0x74, 0x69, 0x63, 0x6c, 0x65, 0x38, 0x53, 0x75,
 	0x62, 0x66, 0x75, 0x6e, 0x64, 0x2e, 0x53, 0x75, 0x73, 0x74, 0x61, 0x69, 0x6e, 0x61, 0x62, 0x6c,
@@ -3829,7 +3829,7 @@ var file_standards_open_v1_RT0007VM1_proto_rawDesc = []byte{
 	0x69, 0x6e, 0x69, 0x6d, 0x61, 0x6c, 0x50, 0x72, 0x6f, 0x70, 0x6f, 0x72, 0x74, 0x69, 0x6f, 0x6e,
 	0x31, 0x12, 0xe1, 0x01, 0x0a, 0x23, 0x65, 0x6e, 0x76, 0x69, 0x72, 0x6f, 0x6e, 0x6d, 0x65, 0x6e,
 	0x74, 0x61, 0x6c, 0x5f, 0x61, 0x6e, 0x64, 0x5f, 0x73, 0x6f, 0x63, 0x69, 0x61, 0x6c, 0x5f, 0x6f,
-	0x62, 0x6a, 0x65, 0x63, 0x74, 0x69, 0x76, 0x65, 0x73, 0x18, 0x08, 0x20, 0x01, 0x28, 0x0e, 0x32,
+	0x62, 0x6a, 0x65, 0x63, 0x74, 0x69, 0x76, 0x65, 0x73, 0x18, 0x08, 0x20, 0x03, 0x28, 0x0e, 0x32,
 	0x4d, 0x2e, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2e, 0x6f, 0x70, 0x65, 0x6e,
 	0x2e, 0x76, 0x31, 0x2e, 0x52, 0x54, 0x30, 0x30, 0x30, 0x37, 0x56, 0x4d, 0x31, 0x2e, 0x41, 0x72,
 	0x74, 0x69, 0x63, 0x6c, 0x65, 0x39, 0x53, 0x75, 0x62, 0x66, 0x75, 0x6e, 0x64, 0x2e, 0x45, 0x6e,
