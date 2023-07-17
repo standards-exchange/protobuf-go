@@ -598,6 +598,12 @@ type RT0008FD7 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The umbrella name
+	UmbrellaName string `protobuf:"bytes,91,opt,name=umbrella_name,json=umbrellaName,proto3" json:"umbrella_name,omitempty"`
+	// The umbrella internal identifier
+	UmbrellaInternalIdentifier string `protobuf:"bytes,92,opt,name=umbrella_internal_identifier,json=umbrellaInternalIdentifier,proto3" json:"umbrella_internal_identifier,omitempty"`
+	// CSSF code of the umbrellas
+	UmbrellaCssfCode string `protobuf:"bytes,93,opt,name=umbrella_cssf_code,json=entityCssfCode,proto3" json:"umbrella_cssf_code,omitempty"`
 	// Data for a particular sub-fund
 	SubFundData []*RT0008FD7_SubFundData `protobuf:"bytes,1,rep,name=sub_fund_data,json=subFundData,proto3" json:"sub_fund_data,omitempty"`
 }
@@ -634,9 +640,77 @@ func (*RT0008FD7) Descriptor() ([]byte, []int) {
 	return file_standards_open_v1_RT0008FD7_proto_rawDescGZIP(), []int{0}
 }
 
+func (x *RT0008FD7) GetUmbrellaName() string {
+	if x != nil {
+		return x.UmbrellaName
+	}
+	return ""
+}
+
+func (x *RT0008FD7) GetUmbrellaInternalIdentifier() string {
+	if x != nil {
+		return x.UmbrellaInternalIdentifier
+	}
+	return ""
+}
+
+func (x *RT0008FD7) GetUmbrellaCssfCode() string {
+	if x != nil {
+		return x.UmbrellaCssfCode
+	}
+	return ""
+}
+
 func (x *RT0008FD7) GetSubFundData() []*RT0008FD7_SubFundData {
 	if x != nil {
 		return x.SubFundData
+	}
+	return nil
+}
+
+type RT0008FD7Batch struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Response []*RT0008FD7 `protobuf:"bytes,1,rep,name=response,proto3" json:"response,omitempty"`
+}
+
+func (x *RT0008FD7Batch) Reset() {
+	*x = RT0008FD7Batch{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RT0008FD7Batch) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RT0008FD7Batch) ProtoMessage() {}
+
+func (x *RT0008FD7Batch) ProtoReflect() protoreflect.Message {
+	mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RT0008FD7Batch.ProtoReflect.Descriptor instead.
+func (*RT0008FD7Batch) Descriptor() ([]byte, []int) {
+	return file_standards_open_v1_RT0008FD7_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *RT0008FD7Batch) GetResponse() []*RT0008FD7 {
+	if x != nil {
+		return x.Response
 	}
 	return nil
 }
@@ -646,12 +720,6 @@ type RT0008FD7_SubFundData struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// The umbrella name
-	UmbrellaName string `protobuf:"bytes,91,opt,name=umbrella_name,json=umbrellaName,proto3" json:"umbrella_name,omitempty"`
-	// The umbrella internal identifier
-	UmbrellaInternalIdentifier string `protobuf:"bytes,92,opt,name=umbrella_internal_identifier,json=umbrellaInternalIdentifier,proto3" json:"umbrella_internal_identifier,omitempty"`
-	// CSSF code of the umbrellas
-	UmbrellaCssfCode string `protobuf:"bytes,93,opt,name=umbrella_cssf_code,json=entityCssfCode,proto3" json:"umbrella_cssf_code,omitempty"`
 	// The reporting name of the fund
 	FundName string `protobuf:"bytes,94,opt,name=fund_name,json=fundName,proto3" json:"fund_name,omitempty"`
 	// The internal identifier of the sub-fund
@@ -674,7 +742,7 @@ type RT0008FD7_SubFundData struct {
 func (x *RT0008FD7_SubFundData) Reset() {
 	*x = RT0008FD7_SubFundData{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[1]
+		mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -687,7 +755,7 @@ func (x *RT0008FD7_SubFundData) String() string {
 func (*RT0008FD7_SubFundData) ProtoMessage() {}
 
 func (x *RT0008FD7_SubFundData) ProtoReflect() protoreflect.Message {
-	mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[1]
+	mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -701,27 +769,6 @@ func (x *RT0008FD7_SubFundData) ProtoReflect() protoreflect.Message {
 // Deprecated: Use RT0008FD7_SubFundData.ProtoReflect.Descriptor instead.
 func (*RT0008FD7_SubFundData) Descriptor() ([]byte, []int) {
 	return file_standards_open_v1_RT0008FD7_proto_rawDescGZIP(), []int{0, 0}
-}
-
-func (x *RT0008FD7_SubFundData) GetUmbrellaName() string {
-	if x != nil {
-		return x.UmbrellaName
-	}
-	return ""
-}
-
-func (x *RT0008FD7_SubFundData) GetUmbrellaInternalIdentifier() string {
-	if x != nil {
-		return x.UmbrellaInternalIdentifier
-	}
-	return ""
-}
-
-func (x *RT0008FD7_SubFundData) GetUmbrellaCssfCode() string {
-	if x != nil {
-		return x.UmbrellaCssfCode
-	}
-	return ""
 }
 
 func (x *RT0008FD7_SubFundData) GetFundName() string {
@@ -945,7 +992,7 @@ type RT0008FD7_SubFundData_Article8SubfundResponses struct {
 func (x *RT0008FD7_SubFundData_Article8SubfundResponses) Reset() {
 	*x = RT0008FD7_SubFundData_Article8SubfundResponses{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[2]
+		mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -958,7 +1005,7 @@ func (x *RT0008FD7_SubFundData_Article8SubfundResponses) String() string {
 func (*RT0008FD7_SubFundData_Article8SubfundResponses) ProtoMessage() {}
 
 func (x *RT0008FD7_SubFundData_Article8SubfundResponses) ProtoReflect() protoreflect.Message {
-	mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[2]
+	mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1550,7 +1597,7 @@ type RT0008FD7_SubFundData_Article9SubfundResponses struct {
 func (x *RT0008FD7_SubFundData_Article9SubfundResponses) Reset() {
 	*x = RT0008FD7_SubFundData_Article9SubfundResponses{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[3]
+		mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1563,7 +1610,7 @@ func (x *RT0008FD7_SubFundData_Article9SubfundResponses) String() string {
 func (*RT0008FD7_SubFundData_Article9SubfundResponses) ProtoMessage() {}
 
 func (x *RT0008FD7_SubFundData_Article9SubfundResponses) ProtoReflect() protoreflect.Message {
-	mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[3]
+	mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2002,7 +2049,7 @@ type RT0008FD7_SubFundData_OtherSubfundResponses struct {
 func (x *RT0008FD7_SubFundData_OtherSubfundResponses) Reset() {
 	*x = RT0008FD7_SubFundData_OtherSubfundResponses{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[4]
+		mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2015,7 +2062,7 @@ func (x *RT0008FD7_SubFundData_OtherSubfundResponses) String() string {
 func (*RT0008FD7_SubFundData_OtherSubfundResponses) ProtoMessage() {}
 
 func (x *RT0008FD7_SubFundData_OtherSubfundResponses) ProtoReflect() protoreflect.Message {
-	mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[4]
+	mi := &file_standards_open_v1_RT0008FD7_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2087,24 +2134,24 @@ var file_standards_open_v1_RT0008FD7_proto_rawDesc = []byte{
 	0x64, 0x61, 0x72, 0x64, 0x73, 0x2f, 0x6f, 0x70, 0x65, 0x6e, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x69,
 	0x65, 0x6c, 0x64, 0x4f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x45, 0x78, 0x74, 0x65, 0x6e, 0x74,
 	0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x98, 0xcf, 0x02, 0x0a, 0x09,
-	0x52, 0x54, 0x30, 0x30, 0x30, 0x38, 0x46, 0x44, 0x37, 0x12, 0x4c, 0x0a, 0x0d, 0x73, 0x75, 0x62,
-	0x5f, 0x66, 0x75, 0x6e, 0x64, 0x5f, 0x64, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b,
-	0x32, 0x28, 0x2e, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2e, 0x6f, 0x70, 0x65,
-	0x6e, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x54, 0x30, 0x30, 0x30, 0x38, 0x46, 0x44, 0x37, 0x2e, 0x53,
-	0x75, 0x62, 0x46, 0x75, 0x6e, 0x64, 0x44, 0x61, 0x74, 0x61, 0x52, 0x0b, 0x73, 0x75, 0x62, 0x46,
-	0x75, 0x6e, 0x64, 0x44, 0x61, 0x74, 0x61, 0x1a, 0xbb, 0xce, 0x02, 0x0a, 0x0b, 0x53, 0x75, 0x62,
-	0x46, 0x75, 0x6e, 0x64, 0x44, 0x61, 0x74, 0x61, 0x12, 0x23, 0x0a, 0x0d, 0x75, 0x6d, 0x62, 0x72,
-	0x65, 0x6c, 0x6c, 0x61, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x5b, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x0c, 0x75, 0x6d, 0x62, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x40, 0x0a,
-	0x1c, 0x75, 0x6d, 0x62, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x5f, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x6e,
-	0x61, 0x6c, 0x5f, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x66, 0x69, 0x65, 0x72, 0x18, 0x5c, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x1a, 0x75, 0x6d, 0x62, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x49, 0x6e, 0x74,
-	0x65, 0x72, 0x6e, 0x61, 0x6c, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x66, 0x69, 0x65, 0x72, 0x12,
-	0x49, 0x0a, 0x12, 0x75, 0x6d, 0x62, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x5f, 0x63, 0x73, 0x73, 0x66,
-	0x5f, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x5d, 0x20, 0x01, 0x28, 0x09, 0x42, 0x1d, 0x8a, 0x97, 0x22,
-	0x19, 0x0a, 0x17, 0x43, 0x53, 0x53, 0x46, 0x20, 0x63, 0x6f, 0x64, 0x65, 0x20, 0x6f, 0x66, 0x20,
-	0x74, 0x68, 0x65, 0x20, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x0e, 0x65, 0x6e, 0x74, 0x69,
-	0x74, 0x79, 0x43, 0x73, 0x73, 0x66, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x1b, 0x0a, 0x09, 0x66, 0x75,
+	0x52, 0x54, 0x30, 0x30, 0x30, 0x38, 0x46, 0x44, 0x37, 0x12, 0x23, 0x0a, 0x0d, 0x75, 0x6d, 0x62,
+	0x72, 0x65, 0x6c, 0x6c, 0x61, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x5b, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x0c, 0x75, 0x6d, 0x62, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x40,
+	0x0a, 0x1c, 0x75, 0x6d, 0x62, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x5f, 0x69, 0x6e, 0x74, 0x65, 0x72,
+	0x6e, 0x61, 0x6c, 0x5f, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x66, 0x69, 0x65, 0x72, 0x18, 0x5c,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x1a, 0x75, 0x6d, 0x62, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x49, 0x6e,
+	0x74, 0x65, 0x72, 0x6e, 0x61, 0x6c, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x66, 0x69, 0x65, 0x72,
+	0x12, 0x49, 0x0a, 0x12, 0x75, 0x6d, 0x62, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x5f, 0x63, 0x73, 0x73,
+	0x66, 0x5f, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x5d, 0x20, 0x01, 0x28, 0x09, 0x42, 0x1d, 0x8a, 0x97,
+	0x22, 0x19, 0x0a, 0x17, 0x43, 0x53, 0x53, 0x46, 0x20, 0x63, 0x6f, 0x64, 0x65, 0x20, 0x6f, 0x66,
+	0x20, 0x74, 0x68, 0x65, 0x20, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x0e, 0x65, 0x6e, 0x74,
+	0x69, 0x74, 0x79, 0x43, 0x73, 0x73, 0x66, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x4c, 0x0a, 0x0d, 0x73,
+	0x75, 0x62, 0x5f, 0x66, 0x75, 0x6e, 0x64, 0x5f, 0x64, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x03,
+	0x28, 0x0b, 0x32, 0x28, 0x2e, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2e, 0x6f,
+	0x70, 0x65, 0x6e, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x54, 0x30, 0x30, 0x30, 0x38, 0x46, 0x44, 0x37,
+	0x2e, 0x53, 0x75, 0x62, 0x46, 0x75, 0x6e, 0x64, 0x44, 0x61, 0x74, 0x61, 0x52, 0x0b, 0x73, 0x75,
+	0x62, 0x46, 0x75, 0x6e, 0x64, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x89, 0xcd, 0x02, 0x0a, 0x0b, 0x53,
+	0x75, 0x62, 0x46, 0x75, 0x6e, 0x64, 0x44, 0x61, 0x74, 0x61, 0x12, 0x1b, 0x0a, 0x09, 0x66, 0x75,
 	0x6e, 0x64, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x5e, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x66,
 	0x75, 0x6e, 0x64, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x38, 0x0a, 0x18, 0x66, 0x75, 0x6e, 0x64, 0x5f,
 	0x69, 0x6e, 0x74, 0x65, 0x72, 0x6e, 0x61, 0x6c, 0x5f, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x66,
@@ -4768,11 +4815,16 @@ var file_standards_open_v1_RT0008FD7_proto_rawDesc = []byte{
 	0x5f, 0x39, 0x10, 0x03, 0x22, 0x30, 0x0a, 0x05, 0x59, 0x65, 0x73, 0x4e, 0x6f, 0x12, 0x19, 0x0a,
 	0x15, 0x59, 0x45, 0x53, 0x5f, 0x4e, 0x4f, 0x5f, 0x4e, 0x41, 0x5f, 0x55, 0x4e, 0x53, 0x50, 0x45,
 	0x43, 0x49, 0x46, 0x49, 0x45, 0x44, 0x10, 0x00, 0x12, 0x05, 0x0a, 0x01, 0x59, 0x10, 0x01, 0x12,
-	0x05, 0x0a, 0x01, 0x4e, 0x10, 0x02, 0x42, 0x3d, 0x5a, 0x3b, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62,
-	0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2d, 0x65,
-	0x78, 0x63, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66,
-	0x2d, 0x67, 0x6f, 0x2f, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2f, 0x6f, 0x70,
-	0x65, 0x6e, 0x2f, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x05, 0x0a, 0x01, 0x4e, 0x10, 0x02, 0x22, 0x4b, 0x0a, 0x0f, 0x52, 0x54, 0x30, 0x30, 0x30, 0x38,
+	0x46, 0x44, 0x37, 0x5f, 0x62, 0x61, 0x74, 0x63, 0x68, 0x12, 0x38, 0x0a, 0x08, 0x72, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x73, 0x74,
+	0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2e, 0x6f, 0x70, 0x65, 0x6e, 0x2e, 0x76, 0x31, 0x2e,
+	0x52, 0x54, 0x30, 0x30, 0x30, 0x38, 0x46, 0x44, 0x37, 0x52, 0x08, 0x72, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x42, 0x3d, 0x5a, 0x3b, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f,
+	0x6d, 0x2f, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2d, 0x65, 0x78, 0x63, 0x68,
+	0x61, 0x6e, 0x67, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2d, 0x67, 0x6f,
+	0x2f, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2f, 0x6f, 0x70, 0x65, 0x6e, 0x2f,
+	0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -4788,7 +4840,7 @@ func file_standards_open_v1_RT0008FD7_proto_rawDescGZIP() []byte {
 }
 
 var file_standards_open_v1_RT0008FD7_proto_enumTypes = make([]protoimpl.EnumInfo, 9)
-var file_standards_open_v1_RT0008FD7_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_standards_open_v1_RT0008FD7_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_standards_open_v1_RT0008FD7_proto_goTypes = []interface{}{
 	(RT0008FD7_SubFundData_SFDRArticleClassification)(0),                                 // 0: standards.open.v1.RT0008FD7.SubFundData.SFDRArticleClassification
 	(RT0008FD7_SubFundData_YesNo)(0),                                                     // 1: standards.open.v1.RT0008FD7.SubFundData.YesNo
@@ -4800,87 +4852,89 @@ var file_standards_open_v1_RT0008FD7_proto_goTypes = []interface{}{
 	(RT0008FD7_SubFundData_Article9SubfundResponses_InvestmentStrategy)(0),               // 7: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.InvestmentStrategy
 	(RT0008FD7_SubFundData_Article9SubfundResponses_TACalculationMethod)(0),              // 8: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.TACalculationMethod
 	(*RT0008FD7)(nil),                                      // 9: standards.open.v1.RT0008FD7
-	(*RT0008FD7_SubFundData)(nil),                          // 10: standards.open.v1.RT0008FD7.SubFundData
-	(*RT0008FD7_SubFundData_Article8SubfundResponses)(nil), // 11: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses
-	(*RT0008FD7_SubFundData_Article9SubfundResponses)(nil), // 12: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses
-	(*RT0008FD7_SubFundData_OtherSubfundResponses)(nil),    // 13: standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses
+	(*RT0008FD7Batch)(nil),                                 // 10: standards.open.v1.RT0008FD7_batch
+	(*RT0008FD7_SubFundData)(nil),                          // 11: standards.open.v1.RT0008FD7.SubFundData
+	(*RT0008FD7_SubFundData_Article8SubfundResponses)(nil), // 12: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses
+	(*RT0008FD7_SubFundData_Article9SubfundResponses)(nil), // 13: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses
+	(*RT0008FD7_SubFundData_OtherSubfundResponses)(nil),    // 14: standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses
 }
 var file_standards_open_v1_RT0008FD7_proto_depIdxs = []int32{
-	10, // 0: standards.open.v1.RT0008FD7.sub_fund_data:type_name -> standards.open.v1.RT0008FD7.SubFundData
-	0,  // 1: standards.open.v1.RT0008FD7.SubFundData.sfdr_article_classification:type_name -> standards.open.v1.RT0008FD7.SubFundData.SFDRArticleClassification
-	11, // 2: standards.open.v1.RT0008FD7.SubFundData.article8_responses:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses
-	12, // 3: standards.open.v1.RT0008FD7.SubFundData.article9_responses:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses
-	13, // 4: standards.open.v1.RT0008FD7.SubFundData.other_responses:type_name -> standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses
-	1,  // 5: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.sustainable_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 6: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.environmental_objective_taxonomy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 7: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.environmental_objective_no_taxonomy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 8: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.social_objective_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	2,  // 9: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.e_and_s_characteristics:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.EAndSCharacteristic
-	3,  // 10: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.sustainable_investments_objectives:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.SustainableInvestmentObjective
-	1,  // 11: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.principal_adverse_impact_consideration_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	4,  // 12: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.investments_strategies:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.InvestmentStrategy
-	1,  // 13: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.good_governance_policy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 14: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.derivatives_use_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	5,  // 15: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.taCalculationMethod:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.TACalculationMethod
-	1,  // 16: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.fossil_gas_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 17: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.nuclear_energy_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 18: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.environmental_or_social_safeguards_minimum_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 19: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.reference_benchmark_designated_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 20: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.reference_benchmark_isin_code_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 21: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.compliance_art23_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 22: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.compliance_art24_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 23: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.template_provided_to_cssf_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 24: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.ramp_up_period_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 25: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.template_available_to_investors_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 26: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.prominent_statement_main_body_prospectus_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 27: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.requirements_c_d_r_compliance_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 28: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.no_contradiction_with_website_link_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 29: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.no_contradiction_with_disclosed_information_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 30: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.reflect_implementation_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 31: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.sustainability_risks_considered_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 32: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.art6_information_disclosed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 33: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.template_c_d_r_copy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 34: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.template_all_sections_completed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 35: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.latest_published_information_correspondence_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 36: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.sustainable_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 37: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.environmental_objective_taxonomy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 38: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.environmental_objective_no_taxonomy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 39: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.social_objective_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	6,  // 40: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.environmental_and_social_objectives:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.EnvironmentalAndSocialObjectives
-	1,  // 41: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.principal_adverse_impact_consideration_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	7,  // 42: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.investments_strategies:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.InvestmentStrategy
-	1,  // 43: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.good_governance_policy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 44: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.derivatives_use_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	8,  // 45: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.ta_calculation_method:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.TACalculationMethod
-	1,  // 46: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.fossil_gas_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 47: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.nuclear_energy_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 48: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.environmental_or_social_safeguards_minimum_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 49: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.reference_benchmark_designated_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 50: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.reference_benchmark_isin_code_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 51: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.compliance_art23_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 52: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.compliance_art_37_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 53: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.template_provided_to_cssf_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 54: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.ramp_up_period_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 55: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.template_available_to_investors_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 56: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.prominent_statement_main_body_prospectus_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 57: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.requirements_c_d_r_compliance_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 58: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.no_contradiction_with_website_link_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 59: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.no_contradiction_with_disclosed_information_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 60: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.reflect_implementation_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 61: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.sustainability_risks_considered_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 62: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.art6_information_disclosed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 63: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.template_c_d_r_copy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 64: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.template_all_sections_completed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 65: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.latest_published_information_correspondence_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 66: standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses.article6_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 67: standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses.information_article6_disclosed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 68: standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses.article7_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	1,  // 69: standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses.information_article7_disclosed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
-	70, // [70:70] is the sub-list for method output_type
-	70, // [70:70] is the sub-list for method input_type
-	70, // [70:70] is the sub-list for extension type_name
-	70, // [70:70] is the sub-list for extension extendee
-	0,  // [0:70] is the sub-list for field type_name
+	11, // 0: standards.open.v1.RT0008FD7.sub_fund_data:type_name -> standards.open.v1.RT0008FD7.SubFundData
+	9,  // 1: standards.open.v1.RT0008FD7_batch.response:type_name -> standards.open.v1.RT0008FD7
+	0,  // 2: standards.open.v1.RT0008FD7.SubFundData.sfdr_article_classification:type_name -> standards.open.v1.RT0008FD7.SubFundData.SFDRArticleClassification
+	12, // 3: standards.open.v1.RT0008FD7.SubFundData.article8_responses:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses
+	13, // 4: standards.open.v1.RT0008FD7.SubFundData.article9_responses:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses
+	14, // 5: standards.open.v1.RT0008FD7.SubFundData.other_responses:type_name -> standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses
+	1,  // 6: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.sustainable_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 7: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.environmental_objective_taxonomy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 8: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.environmental_objective_no_taxonomy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 9: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.social_objective_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	2,  // 10: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.e_and_s_characteristics:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.EAndSCharacteristic
+	3,  // 11: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.sustainable_investments_objectives:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.SustainableInvestmentObjective
+	1,  // 12: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.principal_adverse_impact_consideration_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	4,  // 13: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.investments_strategies:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.InvestmentStrategy
+	1,  // 14: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.good_governance_policy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 15: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.derivatives_use_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	5,  // 16: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.taCalculationMethod:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.TACalculationMethod
+	1,  // 17: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.fossil_gas_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 18: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.nuclear_energy_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 19: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.environmental_or_social_safeguards_minimum_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 20: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.reference_benchmark_designated_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 21: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.reference_benchmark_isin_code_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 22: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.compliance_art23_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 23: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.compliance_art24_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 24: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.template_provided_to_cssf_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 25: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.ramp_up_period_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 26: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.template_available_to_investors_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 27: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.prominent_statement_main_body_prospectus_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 28: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.requirements_c_d_r_compliance_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 29: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.no_contradiction_with_website_link_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 30: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.no_contradiction_with_disclosed_information_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 31: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.reflect_implementation_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 32: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.sustainability_risks_considered_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 33: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.art6_information_disclosed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 34: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.template_c_d_r_copy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 35: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.template_all_sections_completed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 36: standards.open.v1.RT0008FD7.SubFundData.Article8SubfundResponses.latest_published_information_correspondence_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 37: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.sustainable_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 38: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.environmental_objective_taxonomy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 39: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.environmental_objective_no_taxonomy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 40: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.social_objective_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	6,  // 41: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.environmental_and_social_objectives:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.EnvironmentalAndSocialObjectives
+	1,  // 42: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.principal_adverse_impact_consideration_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	7,  // 43: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.investments_strategies:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.InvestmentStrategy
+	1,  // 44: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.good_governance_policy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 45: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.derivatives_use_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	8,  // 46: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.ta_calculation_method:type_name -> standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.TACalculationMethod
+	1,  // 47: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.fossil_gas_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 48: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.nuclear_energy_investments_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 49: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.environmental_or_social_safeguards_minimum_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 50: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.reference_benchmark_designated_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 51: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.reference_benchmark_isin_code_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 52: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.compliance_art23_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 53: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.compliance_art_37_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 54: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.template_provided_to_cssf_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 55: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.ramp_up_period_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 56: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.template_available_to_investors_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 57: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.prominent_statement_main_body_prospectus_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 58: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.requirements_c_d_r_compliance_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 59: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.no_contradiction_with_website_link_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 60: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.no_contradiction_with_disclosed_information_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 61: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.reflect_implementation_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 62: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.sustainability_risks_considered_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 63: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.art6_information_disclosed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 64: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.template_c_d_r_copy_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 65: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.template_all_sections_completed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 66: standards.open.v1.RT0008FD7.SubFundData.Article9SubfundResponses.latest_published_information_correspondence_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 67: standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses.article6_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 68: standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses.information_article6_disclosed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 69: standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses.article7_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	1,  // 70: standards.open.v1.RT0008FD7.SubFundData.OtherSubfundResponses.information_article7_disclosed_indicator:type_name -> standards.open.v1.RT0008FD7.SubFundData.YesNo
+	71, // [71:71] is the sub-list for method output_type
+	71, // [71:71] is the sub-list for method input_type
+	71, // [71:71] is the sub-list for extension type_name
+	71, // [71:71] is the sub-list for extension extendee
+	0,  // [0:71] is the sub-list for field type_name
 }
 
 func init() { file_standards_open_v1_RT0008FD7_proto_init() }
@@ -4904,7 +4958,7 @@ func file_standards_open_v1_RT0008FD7_proto_init() {
 			}
 		}
 		file_standards_open_v1_RT0008FD7_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RT0008FD7_SubFundData); i {
+			switch v := v.(*RT0008FD7Batch); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4916,7 +4970,7 @@ func file_standards_open_v1_RT0008FD7_proto_init() {
 			}
 		}
 		file_standards_open_v1_RT0008FD7_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RT0008FD7_SubFundData_Article8SubfundResponses); i {
+			switch v := v.(*RT0008FD7_SubFundData); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4928,7 +4982,7 @@ func file_standards_open_v1_RT0008FD7_proto_init() {
 			}
 		}
 		file_standards_open_v1_RT0008FD7_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RT0008FD7_SubFundData_Article9SubfundResponses); i {
+			switch v := v.(*RT0008FD7_SubFundData_Article8SubfundResponses); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4940,6 +4994,18 @@ func file_standards_open_v1_RT0008FD7_proto_init() {
 			}
 		}
 		file_standards_open_v1_RT0008FD7_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*RT0008FD7_SubFundData_Article9SubfundResponses); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_standards_open_v1_RT0008FD7_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RT0008FD7_SubFundData_OtherSubfundResponses); i {
 			case 0:
 				return &v.state
@@ -4958,7 +5024,7 @@ func file_standards_open_v1_RT0008FD7_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_standards_open_v1_RT0008FD7_proto_rawDesc,
 			NumEnums:      9,
-			NumMessages:   5,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
