@@ -26,7 +26,9 @@ const (
 type RT0009DB1_ActiveOrLiquidation int32
 
 const (
-	RT0009DB1_ACTIVE         RT0009DB1_ActiveOrLiquidation = 0
+	// Active
+	RT0009DB1_ACTIVE RT0009DB1_ActiveOrLiquidation = 0
+	// In Liquidation
 	RT0009DB1_IN_LIQUIDATION RT0009DB1_ActiveOrLiquidation = 1
 )
 
@@ -73,10 +75,14 @@ func (RT0009DB1_ActiveOrLiquidation) EnumDescriptor() ([]byte, []int) {
 type RT0009DB1_EntityInformation_License int32
 
 const (
+	// License Unspecified
 	RT0009DB1_EntityInformation_LICENSE_UNSPECIFIED RT0009DB1_EntityInformation_License = 0
-	RT0009DB1_EntityInformation_UCITS               RT0009DB1_EntityInformation_License = 1
-	RT0009DB1_EntityInformation_AIF                 RT0009DB1_EntityInformation_License = 2
-	RT0009DB1_EntityInformation_MONEY_MARKET        RT0009DB1_EntityInformation_License = 3
+	// UCITS
+	RT0009DB1_EntityInformation_UCITS RT0009DB1_EntityInformation_License = 1
+	// AIF
+	RT0009DB1_EntityInformation_AIF RT0009DB1_EntityInformation_License = 2
+	// Money Market
+	RT0009DB1_EntityInformation_MONEY_MARKET RT0009DB1_EntityInformation_License = 3
 )
 
 // Enum value maps for RT0009DB1_EntityInformation_License.
@@ -125,9 +131,13 @@ func (RT0009DB1_EntityInformation_License) EnumDescriptor() ([]byte, []int) {
 type RT0009DB1_NavDetermination_AccountingStandard int32
 
 const (
-	RT0009DB1_NavDetermination_OTHER           RT0009DB1_NavDetermination_AccountingStandard = 0
-	RT0009DB1_NavDetermination_IFRS            RT0009DB1_NavDetermination_AccountingStandard = 1
-	RT0009DB1_NavDetermination_US_GAAP         RT0009DB1_NavDetermination_AccountingStandard = 2
+	// Other
+	RT0009DB1_NavDetermination_OTHER RT0009DB1_NavDetermination_AccountingStandard = 0
+	// IFRS
+	RT0009DB1_NavDetermination_IFRS RT0009DB1_NavDetermination_AccountingStandard = 1
+	// US GAAP
+	RT0009DB1_NavDetermination_US_GAAP RT0009DB1_NavDetermination_AccountingStandard = 2
+	// Luxembourg GAAP
 	RT0009DB1_NavDetermination_LUXEMBOURG_GAAP RT0009DB1_NavDetermination_AccountingStandard = 3
 )
 
