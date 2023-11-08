@@ -414,54 +414,6 @@ func (x *RT000JTL0) GetTopInvestmentsSubfunds() []*RT000JTL0_TopInvestmentsSubfu
 	return nil
 }
 
-// Batch set of RT000JTL0 responses
-type RT000JTL0Batch struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Response []*RT000JTL0 `protobuf:"bytes,1,rep,name=response,proto3" json:"response,omitempty"`
-}
-
-func (x *RT000JTL0Batch) Reset() {
-	*x = RT000JTL0Batch{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *RT000JTL0Batch) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*RT000JTL0Batch) ProtoMessage() {}
-
-func (x *RT000JTL0Batch) ProtoReflect() protoreflect.Message {
-	mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use RT000JTL0Batch.ProtoReflect.Descriptor instead.
-func (*RT000JTL0Batch) Descriptor() ([]byte, []int) {
-	return file_standards_open_v1_RT000JTL0_proto_rawDescGZIP(), []int{1}
-}
-
-func (x *RT000JTL0Batch) GetResponse() []*RT000JTL0 {
-	if x != nil {
-		return x.Response
-	}
-	return nil
-}
-
 // Information to be provided for Article 8 & Article 9 subfunds
 type RT000JTL0_SubFundData struct {
 	state         protoimpl.MessageState
@@ -496,7 +448,7 @@ type RT000JTL0_SubFundData struct {
 func (x *RT000JTL0_SubFundData) Reset() {
 	*x = RT000JTL0_SubFundData{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[2]
+		mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -509,7 +461,7 @@ func (x *RT000JTL0_SubFundData) String() string {
 func (*RT000JTL0_SubFundData) ProtoMessage() {}
 
 func (x *RT000JTL0_SubFundData) ProtoReflect() protoreflect.Message {
-	mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[2]
+	mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -617,7 +569,7 @@ type RT000JTL0_TopInvestmentsSubfundsResponses struct {
 	// CSSF code of the sub-fund. Number corresponding to the compartment without zero in front of the number. For a stand-alone fund, please enter 0. For a multiple compartment fund, please indicate the corresponding number.
 	SubfundCssfCode *wrapperspb.Int32Value `protobuf:"bytes,1,opt,name=subfund_cssf_code,json=subfundCssfCode,proto3" json:"subfund_cssf_code,omitempty"`
 	// ISIN code available?
-	LargestInvestmentISNCodeIndicator RT000JTL0_YesNo `protobuf:"varint,2,opt,name=largest_investment_i_s_n_code_indicator,json=largestInvestmentISINCodeIndicator,proto3,enum=standards.open.v1.RT000JTL0_YesNo" json:"largest_investment_i_s_n_code_indicator,omitempty"`
+	LargestInvestmentISINCodeIndicator RT000JTL0_YesNo `protobuf:"varint,2,opt,name=largest_investment_i_s_i_n_code_indicator,json=largestInvestmentISINCodeIndicator,proto3,enum=standards.open.v1.RT000JTL0_YesNo" json:"largest_investment_i_s_i_n_code_indicator,omitempty"`
 	// Largest investments ISIN code
 	LargestInvestmentISINCode string `protobuf:"bytes,3,opt,name=largest_investment_i_s_i_n_code,json=largestInvestmentISINCode,proto3" json:"largest_investment_i_s_i_n_code,omitempty"`
 	// Largest investments name
@@ -629,7 +581,7 @@ type RT000JTL0_TopInvestmentsSubfundsResponses struct {
 func (x *RT000JTL0_TopInvestmentsSubfundsResponses) Reset() {
 	*x = RT000JTL0_TopInvestmentsSubfundsResponses{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[3]
+		mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -642,7 +594,7 @@ func (x *RT000JTL0_TopInvestmentsSubfundsResponses) String() string {
 func (*RT000JTL0_TopInvestmentsSubfundsResponses) ProtoMessage() {}
 
 func (x *RT000JTL0_TopInvestmentsSubfundsResponses) ProtoReflect() protoreflect.Message {
-	mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[3]
+	mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -707,9 +659,9 @@ func (x *RT000JTL0_TopInvestmentsSubfundsResponses) GetSubfundCssfCode() *wrappe
 	return nil
 }
 
-func (x *RT000JTL0_TopInvestmentsSubfundsResponses) GetLargestInvestmentISNCodeIndicator() RT000JTL0_YesNo {
+func (x *RT000JTL0_TopInvestmentsSubfundsResponses) GetLargestInvestmentISINCodeIndicator() RT000JTL0_YesNo {
 	if x != nil {
-		return x.LargestInvestmentISNCodeIndicator
+		return x.LargestInvestmentISINCodeIndicator
 	}
 	return RT000JTL0_YES_NO_NA_UNSPECIFIED
 }
@@ -741,14 +693,6 @@ type RT000JTL0_SubFundData_Article8SubfundResponses struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	//	// CSSF code of the sub-fund. Number corresponding to the compartment without zero in front of the number. For a stand-alone fund, please enter 0. For a multiple compartment fund, please indicate the corresponding number.
-	//	string subfund_cssf_code = 1 [
-	//	  json_name="subfundCssfCode",
-	//	  (standards.open.v1.fdx_options).required = true,
-	//	  (standards.open.v1.fdx_options).question = "CSSF code of the sub-fund.",
-	//	  (standards.open.v1.fdx_options).description = "Number corresponding to the compartment without zero in front of the number. For a stand-alone fund, please enter 0. For a multiple compartment fund, please indicate the corresponding number."
-	//	];
-	//
 	// Has the subfund been liquidated during the year?
 	SubfundLiquidatedIndicator RT000JTL0_YesNo `protobuf:"varint,2,opt,name=subfund_liquidated_indicator,json=subfundLiquidatedIndicator,proto3,enum=standards.open.v1.RT000JTL0_YesNo" json:"subfund_liquidated_indicator,omitempty"`
 	// If yes, indicate the date of the start of the liquidation period
@@ -853,7 +797,7 @@ type RT000JTL0_SubFundData_Article8SubfundResponses struct {
 func (x *RT000JTL0_SubFundData_Article8SubfundResponses) Reset() {
 	*x = RT000JTL0_SubFundData_Article8SubfundResponses{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[4]
+		mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -866,7 +810,7 @@ func (x *RT000JTL0_SubFundData_Article8SubfundResponses) String() string {
 func (*RT000JTL0_SubFundData_Article8SubfundResponses) ProtoMessage() {}
 
 func (x *RT000JTL0_SubFundData_Article8SubfundResponses) ProtoReflect() protoreflect.Message {
-	mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[4]
+	mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1224,14 +1168,6 @@ type RT000JTL0_SubFundData_Article9SubfundResponses struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	//	// CSSF code of the sub-fund. Number corresponding to the compartment without zero in front of the number. For a stand-alone fund, please enter 0. For a multiple compartment fund, please indicate the corresponding number.
-	//	string subfund_cssf_code = 1 [
-	//	  json_name = "subfundCssfCode",
-	//	  (standards.open.v1.fdx_options).required = true,
-	//	  (standards.open.v1.fdx_options).question = "CSSF code of the sub-fund.",
-	//	  (standards.open.v1.fdx_options).description = "Number corresponding to the compartment without zero in front of the number. For a stand-alone fund, please enter 0. For a multiple compartment fund, please indicate the corresponding number."
-	//	];
-	//
 	// Has the subfund been liquidated during the year?
 	SubfundLiquidatedIndicator RT000JTL0_YesNo `protobuf:"varint,2,opt,name=subfund_liquidated_indicator,json=subfundLiquidatedIndicator,proto3,enum=standards.open.v1.RT000JTL0_YesNo" json:"subfund_liquidated_indicator,omitempty"`
 	// If yes, indicate the date of the start of the liquidation period
@@ -1328,7 +1264,7 @@ type RT000JTL0_SubFundData_Article9SubfundResponses struct {
 func (x *RT000JTL0_SubFundData_Article9SubfundResponses) Reset() {
 	*x = RT000JTL0_SubFundData_Article9SubfundResponses{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[5]
+		mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1341,7 +1277,7 @@ func (x *RT000JTL0_SubFundData_Article9SubfundResponses) String() string {
 func (*RT000JTL0_SubFundData_Article9SubfundResponses) ProtoMessage() {}
 
 func (x *RT000JTL0_SubFundData_Article9SubfundResponses) ProtoReflect() protoreflect.Message {
-	mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[5]
+	mi := &file_standards_open_v1_RT000JTL0_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1694,7 +1630,7 @@ var file_standards_open_v1_RT000JTL0_proto_rawDesc = []byte{
 	0x65, 0x73, 0x6e, 0x6f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2e, 0x73, 0x74, 0x61, 0x6e,
 	0x64, 0x61, 0x72, 0x64, 0x73, 0x2f, 0x6f, 0x70, 0x65, 0x6e, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x69,
 	0x65, 0x6c, 0x64, 0x4f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x45, 0x78, 0x74, 0x65, 0x6e, 0x74,
-	0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0xea, 0xee, 0x02, 0x0a, 0x09,
+	0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0xec, 0xee, 0x02, 0x0a, 0x09,
 	0x52, 0x54, 0x30, 0x30, 0x30, 0x4a, 0x54, 0x4c, 0x30, 0x12, 0x44, 0x0a, 0x08, 0x73, 0x75, 0x62,
 	0x66, 0x75, 0x6e, 0x64, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x28, 0x2e, 0x73, 0x74,
 	0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2e, 0x6f, 0x70, 0x65, 0x6e, 0x2e, 0x76, 0x31, 0x2e,
@@ -4517,7 +4453,7 @@ var file_standards_open_v1_RT000JTL0_proto_rawDesc = []byte{
 	0x4e, 0x5f, 0x55, 0x4e, 0x53, 0x50, 0x45, 0x43, 0x49, 0x46, 0x49, 0x45, 0x44, 0x10, 0x00, 0x12,
 	0x0d, 0x0a, 0x09, 0x41, 0x52, 0x54, 0x49, 0x43, 0x4c, 0x45, 0x5f, 0x36, 0x10, 0x01, 0x12, 0x0d,
 	0x0a, 0x09, 0x41, 0x52, 0x54, 0x49, 0x43, 0x4c, 0x45, 0x5f, 0x38, 0x10, 0x02, 0x12, 0x0d, 0x0a,
-	0x09, 0x41, 0x52, 0x54, 0x49, 0x43, 0x4c, 0x45, 0x5f, 0x39, 0x10, 0x03, 0x1a, 0xc7, 0x0d, 0x0a,
+	0x09, 0x41, 0x52, 0x54, 0x49, 0x43, 0x4c, 0x45, 0x5f, 0x39, 0x10, 0x03, 0x1a, 0xc9, 0x0d, 0x0a,
 	0x1f, 0x54, 0x6f, 0x70, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x53,
 	0x75, 0x62, 0x66, 0x75, 0x6e, 0x64, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x73,
 	0x12, 0x23, 0x0a, 0x0d, 0x75, 0x6d, 0x62, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x5f, 0x6e, 0x61, 0x6d,
@@ -4561,84 +4497,80 @@ var file_standards_open_v1_RT000JTL0_proto_rawDesc = []byte{
 	0x2c, 0x20, 0x70, 0x6c, 0x65, 0x61, 0x73, 0x65, 0x20, 0x69, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74,
 	0x65, 0x20, 0x74, 0x68, 0x65, 0x20, 0x63, 0x6f, 0x72, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x64,
 	0x69, 0x6e, 0x67, 0x20, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x2e, 0x58, 0x01, 0x52, 0x0f, 0x73,
-	0x75, 0x62, 0x66, 0x75, 0x6e, 0x64, 0x43, 0x73, 0x73, 0x66, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x98,
-	0x01, 0x0a, 0x27, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x5f, 0x69, 0x6e, 0x76, 0x65, 0x73,
-	0x74, 0x6d, 0x65, 0x6e, 0x74, 0x5f, 0x69, 0x5f, 0x73, 0x5f, 0x6e, 0x5f, 0x63, 0x6f, 0x64, 0x65,
-	0x5f, 0x69, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0e,
-	0x32, 0x22, 0x2e, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2e, 0x6f, 0x70, 0x65,
-	0x6e, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x54, 0x30, 0x30, 0x30, 0x4a, 0x54, 0x4c, 0x30, 0x2e, 0x59,
-	0x65, 0x73, 0x4e, 0x6f, 0x42, 0x1f, 0x8a, 0x97, 0x22, 0x1b, 0x0a, 0x14, 0x49, 0x53, 0x49, 0x4e,
-	0x20, 0x63, 0x6f, 0x64, 0x65, 0x20, 0x61, 0x76, 0x61, 0x69, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x3f,
-	0x4a, 0x01, 0x32, 0x58, 0x01, 0x52, 0x22, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x49, 0x6e,
+	0x75, 0x62, 0x66, 0x75, 0x6e, 0x64, 0x43, 0x73, 0x73, 0x66, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x9a,
+	0x01, 0x0a, 0x29, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x5f, 0x69, 0x6e, 0x76, 0x65, 0x73,
+	0x74, 0x6d, 0x65, 0x6e, 0x74, 0x5f, 0x69, 0x5f, 0x73, 0x5f, 0x69, 0x5f, 0x6e, 0x5f, 0x63, 0x6f,
+	0x64, 0x65, 0x5f, 0x69, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x0e, 0x32, 0x22, 0x2e, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2e, 0x6f,
+	0x70, 0x65, 0x6e, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x54, 0x30, 0x30, 0x30, 0x4a, 0x54, 0x4c, 0x30,
+	0x2e, 0x59, 0x65, 0x73, 0x4e, 0x6f, 0x42, 0x1f, 0x8a, 0x97, 0x22, 0x1b, 0x0a, 0x14, 0x49, 0x53,
+	0x49, 0x4e, 0x20, 0x63, 0x6f, 0x64, 0x65, 0x20, 0x61, 0x76, 0x61, 0x69, 0x6c, 0x61, 0x62, 0x6c,
+	0x65, 0x3f, 0x4a, 0x01, 0x32, 0x58, 0x01, 0x52, 0x22, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74,
+	0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x53, 0x49, 0x4e, 0x43, 0x6f,
+	0x64, 0x65, 0x49, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x12, 0xbf, 0x02, 0x0a, 0x1f,
+	0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x5f, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65,
+	0x6e, 0x74, 0x5f, 0x69, 0x5f, 0x73, 0x5f, 0x69, 0x5f, 0x6e, 0x5f, 0x63, 0x6f, 0x64, 0x65, 0x18,
+	0x03, 0x20, 0x01, 0x28, 0x09, 0x42, 0xfa, 0x01, 0x8a, 0x97, 0x22, 0xf5, 0x01, 0x0a, 0x90, 0x01,
+	0x4c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x20, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65,
+	0x6e, 0x74, 0x73, 0x20, 0x49, 0x53, 0x49, 0x4e, 0x20, 0x63, 0x6f, 0x64, 0x65, 0x2e, 0x20, 0x49,
+	0x66, 0x20, 0x74, 0x68, 0x65, 0x20, 0x61, 0x6e, 0x73, 0x77, 0x65, 0x72, 0x20, 0x74, 0x6f, 0x20,
+	0x74, 0x68, 0x65, 0x20, 0x71, 0x75, 0x65, 0x73, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x6c, 0x61, 0x72,
+	0x67, 0x65, 0x73, 0x74, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x53,
+	0x49, 0x4e, 0x43, 0x6f, 0x64, 0x65, 0x49, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x20,
+	0x69, 0x73, 0x20, 0x59, 0x65, 0x73, 0x2c, 0x20, 0x70, 0x72, 0x6f, 0x76, 0x69, 0x64, 0x65, 0x20,
+	0x74, 0x68, 0x65, 0x20, 0x49, 0x53, 0x49, 0x4e, 0x20, 0x63, 0x6f, 0x64, 0x65, 0x20, 0x6f, 0x66,
+	0x20, 0x74, 0x68, 0x65, 0x20, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x2e,
+	0x22, 0x60, 0x50, 0x61, 0x79, 0x6c, 0x6f, 0x61, 0x64, 0x2e, 0x53, 0x66, 0x64, 0x72, 0x50, 0x72,
+	0x65, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x75, 0x61, 0x6c, 0x52, 0x65, 0x70, 0x6f,
+	0x72, 0x74, 0x2e, 0x54, 0x6f, 0x70, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74,
+	0x73, 0x53, 0x75, 0x62, 0x66, 0x75, 0x6e, 0x64, 0x73, 0x2e, 0x30, 0x2e, 0x4c, 0x61, 0x72, 0x67,
+	0x65, 0x73, 0x74, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x53, 0x49,
+	0x4e, 0x43, 0x6f, 0x64, 0x65, 0x49, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x3f, 0x31,
+	0x3a, 0x32, 0x52, 0x19, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x49, 0x6e, 0x76, 0x65, 0x73,
+	0x74, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x53, 0x49, 0x4e, 0x43, 0x6f, 0x64, 0x65, 0x12, 0xad, 0x02,
+	0x0a, 0x17, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x5f, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74,
+	0x6d, 0x65, 0x6e, 0x74, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x42,
+	0xf4, 0x01, 0x8a, 0x97, 0x22, 0xef, 0x01, 0x0a, 0x8a, 0x01, 0x4c, 0x61, 0x72, 0x67, 0x65, 0x73,
+	0x74, 0x20, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x20, 0x49, 0x53,
+	0x49, 0x4e, 0x20, 0x63, 0x6f, 0x64, 0x65, 0x2e, 0x20, 0x49, 0x66, 0x20, 0x74, 0x68, 0x65, 0x20,
+	0x61, 0x6e, 0x73, 0x77, 0x65, 0x72, 0x20, 0x74, 0x6f, 0x20, 0x74, 0x68, 0x65, 0x20, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x49, 0x6e,
 	0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x53, 0x49, 0x4e, 0x43, 0x6f, 0x64, 0x65,
-	0x49, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x12, 0xbf, 0x02, 0x0a, 0x1f, 0x6c, 0x61,
-	0x72, 0x67, 0x65, 0x73, 0x74, 0x5f, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74,
-	0x5f, 0x69, 0x5f, 0x73, 0x5f, 0x69, 0x5f, 0x6e, 0x5f, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x03, 0x20,
-	0x01, 0x28, 0x09, 0x42, 0xfa, 0x01, 0x8a, 0x97, 0x22, 0xf5, 0x01, 0x0a, 0x90, 0x01, 0x4c, 0x61,
-	0x72, 0x67, 0x65, 0x73, 0x74, 0x20, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74,
-	0x73, 0x20, 0x49, 0x53, 0x49, 0x4e, 0x20, 0x63, 0x6f, 0x64, 0x65, 0x2e, 0x20, 0x49, 0x66, 0x20,
-	0x74, 0x68, 0x65, 0x20, 0x61, 0x6e, 0x73, 0x77, 0x65, 0x72, 0x20, 0x74, 0x6f, 0x20, 0x74, 0x68,
-	0x65, 0x20, 0x71, 0x75, 0x65, 0x73, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x6c, 0x61, 0x72, 0x67, 0x65,
-	0x73, 0x74, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x53, 0x49, 0x4e,
-	0x43, 0x6f, 0x64, 0x65, 0x49, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x20, 0x69, 0x73,
-	0x20, 0x59, 0x65, 0x73, 0x2c, 0x20, 0x70, 0x72, 0x6f, 0x76, 0x69, 0x64, 0x65, 0x20, 0x74, 0x68,
-	0x65, 0x20, 0x49, 0x53, 0x49, 0x4e, 0x20, 0x63, 0x6f, 0x64, 0x65, 0x20, 0x6f, 0x66, 0x20, 0x74,
-	0x68, 0x65, 0x20, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x2e, 0x22, 0x60,
-	0x50, 0x61, 0x79, 0x6c, 0x6f, 0x61, 0x64, 0x2e, 0x53, 0x66, 0x64, 0x72, 0x50, 0x72, 0x65, 0x63,
-	0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x75, 0x61, 0x6c, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74,
-	0x2e, 0x54, 0x6f, 0x70, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x53,
-	0x75, 0x62, 0x66, 0x75, 0x6e, 0x64, 0x73, 0x2e, 0x30, 0x2e, 0x4c, 0x61, 0x72, 0x67, 0x65, 0x73,
-	0x74, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x53, 0x49, 0x4e, 0x43,
-	0x6f, 0x64, 0x65, 0x49, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x3f, 0x31, 0x3a, 0x32,
-	0x52, 0x19, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d,
-	0x65, 0x6e, 0x74, 0x49, 0x53, 0x49, 0x4e, 0x43, 0x6f, 0x64, 0x65, 0x12, 0xad, 0x02, 0x0a, 0x17,
-	0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x5f, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65,
-	0x6e, 0x74, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x42, 0xf4, 0x01,
-	0x8a, 0x97, 0x22, 0xef, 0x01, 0x0a, 0x8a, 0x01, 0x4c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x20,
-	0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x20, 0x49, 0x53, 0x49, 0x4e,
-	0x20, 0x63, 0x6f, 0x64, 0x65, 0x2e, 0x20, 0x49, 0x66, 0x20, 0x74, 0x68, 0x65, 0x20, 0x61, 0x6e,
-	0x73, 0x77, 0x65, 0x72, 0x20, 0x74, 0x6f, 0x20, 0x74, 0x68, 0x65, 0x20, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x69, 0x6f, 0x6e, 0x20, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x49, 0x6e, 0x76, 0x65,
-	0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x53, 0x49, 0x4e, 0x43, 0x6f, 0x64, 0x65, 0x49, 0x6e,
-	0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x20, 0x69, 0x73, 0x20, 0x4e, 0x6f, 0x2c, 0x20, 0x70,
-	0x72, 0x6f, 0x76, 0x69, 0x64, 0x65, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6e, 0x61, 0x6d, 0x65, 0x20,
-	0x6f, 0x66, 0x20, 0x74, 0x68, 0x65, 0x20, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e,
-	0x74, 0x2e, 0x22, 0x60, 0x50, 0x61, 0x79, 0x6c, 0x6f, 0x61, 0x64, 0x2e, 0x53, 0x66, 0x64, 0x72,
-	0x50, 0x72, 0x65, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x75, 0x61, 0x6c, 0x52, 0x65,
-	0x70, 0x6f, 0x72, 0x74, 0x2e, 0x54, 0x6f, 0x70, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65,
-	0x6e, 0x74, 0x73, 0x53, 0x75, 0x62, 0x66, 0x75, 0x6e, 0x64, 0x73, 0x2e, 0x30, 0x2e, 0x4c, 0x61,
-	0x72, 0x67, 0x65, 0x73, 0x74, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x49,
-	0x53, 0x49, 0x4e, 0x43, 0x6f, 0x64, 0x65, 0x49, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72,
-	0x3f, 0x32, 0x3a, 0x31, 0x52, 0x15, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x49, 0x6e, 0x76,
-	0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0xf8, 0x01, 0x0a, 0x24,
-	0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x5f, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65,
-	0x6e, 0x74, 0x5f, 0x61, 0x73, 0x73, 0x65, 0x74, 0x73, 0x5f, 0x70, 0x65, 0x72, 0x63, 0x65, 0x6e,
-	0x74, 0x61, 0x67, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x67, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x44, 0x6f, 0x75,
-	0x62, 0x6c, 0x65, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x42, 0x88, 0x01, 0x8a, 0x97, 0x22, 0x83, 0x01,
-	0x0a, 0x7f, 0x50, 0x65, 0x72, 0x63, 0x65, 0x6e, 0x74, 0x61, 0x67, 0x65, 0x20, 0x6f, 0x66, 0x20,
-	0x61, 0x73, 0x73, 0x65, 0x74, 0x73, 0x2e, 0x20, 0x41, 0x20, 0x70, 0x6f, 0x73, 0x69, 0x74, 0x69,
-	0x76, 0x65, 0x20, 0x70, 0x65, 0x72, 0x63, 0x65, 0x6e, 0x74, 0x61, 0x67, 0x65, 0x20, 0x72, 0x65,
-	0x66, 0x6c, 0x65, 0x63, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x74, 0x68, 0x65, 0x20, 0x70, 0x65, 0x72,
-	0x63, 0x65, 0x6e, 0x74, 0x61, 0x67, 0x65, 0x20, 0x6f, 0x66, 0x20, 0x61, 0x73, 0x73, 0x65, 0x74,
-	0x73, 0x20, 0x66, 0x6f, 0x72, 0x20, 0x74, 0x68, 0x65, 0x20, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74,
-	0x6d, 0x65, 0x6e, 0x74, 0x20, 0x64, 0x75, 0x72, 0x69, 0x6e, 0x67, 0x20, 0x74, 0x68, 0x65, 0x20,
-	0x79, 0x65, 0x61, 0x72, 0x20, 0x69, 0x73, 0x20, 0x72, 0x65, 0x71, 0x75, 0x69, 0x72, 0x65, 0x64,
-	0x2e, 0x58, 0x01, 0x52, 0x21, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x49, 0x6e, 0x76, 0x65,
-	0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x41, 0x73, 0x73, 0x65, 0x74, 0x73, 0x50, 0x65, 0x72, 0x63,
-	0x65, 0x6e, 0x74, 0x61, 0x67, 0x65, 0x22, 0x30, 0x0a, 0x05, 0x59, 0x65, 0x73, 0x4e, 0x6f, 0x12,
-	0x19, 0x0a, 0x15, 0x59, 0x45, 0x53, 0x5f, 0x4e, 0x4f, 0x5f, 0x4e, 0x41, 0x5f, 0x55, 0x4e, 0x53,
-	0x50, 0x45, 0x43, 0x49, 0x46, 0x49, 0x45, 0x44, 0x10, 0x00, 0x12, 0x05, 0x0a, 0x01, 0x59, 0x10,
-	0x01, 0x12, 0x05, 0x0a, 0x01, 0x4e, 0x10, 0x02, 0x22, 0x4b, 0x0a, 0x0f, 0x52, 0x54, 0x30, 0x30,
-	0x30, 0x4a, 0x54, 0x4c, 0x30, 0x5f, 0x62, 0x61, 0x74, 0x63, 0x68, 0x12, 0x38, 0x0a, 0x08, 0x72,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1c, 0x2e,
-	0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2e, 0x6f, 0x70, 0x65, 0x6e, 0x2e, 0x76,
-	0x31, 0x2e, 0x52, 0x54, 0x30, 0x30, 0x30, 0x4a, 0x54, 0x4c, 0x30, 0x52, 0x08, 0x72, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x3d, 0x5a, 0x3b, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e,
-	0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2d, 0x65, 0x78,
-	0x63, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2d,
-	0x67, 0x6f, 0x2f, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2f, 0x6f, 0x70, 0x65,
-	0x6e, 0x2f, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x49, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x20, 0x69, 0x73, 0x20, 0x4e, 0x6f, 0x2c,
+	0x20, 0x70, 0x72, 0x6f, 0x76, 0x69, 0x64, 0x65, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6e, 0x61, 0x6d,
+	0x65, 0x20, 0x6f, 0x66, 0x20, 0x74, 0x68, 0x65, 0x20, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d,
+	0x65, 0x6e, 0x74, 0x2e, 0x22, 0x60, 0x50, 0x61, 0x79, 0x6c, 0x6f, 0x61, 0x64, 0x2e, 0x53, 0x66,
+	0x64, 0x72, 0x50, 0x72, 0x65, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x75, 0x61, 0x6c,
+	0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x2e, 0x54, 0x6f, 0x70, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74,
+	0x6d, 0x65, 0x6e, 0x74, 0x73, 0x53, 0x75, 0x62, 0x66, 0x75, 0x6e, 0x64, 0x73, 0x2e, 0x30, 0x2e,
+	0x4c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x49, 0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e,
+	0x74, 0x49, 0x53, 0x49, 0x4e, 0x43, 0x6f, 0x64, 0x65, 0x49, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x74,
+	0x6f, 0x72, 0x3f, 0x32, 0x3a, 0x31, 0x52, 0x15, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x49,
+	0x6e, 0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0xf8, 0x01,
+	0x0a, 0x24, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x5f, 0x69, 0x6e, 0x76, 0x65, 0x73, 0x74,
+	0x6d, 0x65, 0x6e, 0x74, 0x5f, 0x61, 0x73, 0x73, 0x65, 0x74, 0x73, 0x5f, 0x70, 0x65, 0x72, 0x63,
+	0x65, 0x6e, 0x74, 0x61, 0x67, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x67,
+	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x44,
+	0x6f, 0x75, 0x62, 0x6c, 0x65, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x42, 0x88, 0x01, 0x8a, 0x97, 0x22,
+	0x83, 0x01, 0x0a, 0x7f, 0x50, 0x65, 0x72, 0x63, 0x65, 0x6e, 0x74, 0x61, 0x67, 0x65, 0x20, 0x6f,
+	0x66, 0x20, 0x61, 0x73, 0x73, 0x65, 0x74, 0x73, 0x2e, 0x20, 0x41, 0x20, 0x70, 0x6f, 0x73, 0x69,
+	0x74, 0x69, 0x76, 0x65, 0x20, 0x70, 0x65, 0x72, 0x63, 0x65, 0x6e, 0x74, 0x61, 0x67, 0x65, 0x20,
+	0x72, 0x65, 0x66, 0x6c, 0x65, 0x63, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x74, 0x68, 0x65, 0x20, 0x70,
+	0x65, 0x72, 0x63, 0x65, 0x6e, 0x74, 0x61, 0x67, 0x65, 0x20, 0x6f, 0x66, 0x20, 0x61, 0x73, 0x73,
+	0x65, 0x74, 0x73, 0x20, 0x66, 0x6f, 0x72, 0x20, 0x74, 0x68, 0x65, 0x20, 0x69, 0x6e, 0x76, 0x65,
+	0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x20, 0x64, 0x75, 0x72, 0x69, 0x6e, 0x67, 0x20, 0x74, 0x68,
+	0x65, 0x20, 0x79, 0x65, 0x61, 0x72, 0x20, 0x69, 0x73, 0x20, 0x72, 0x65, 0x71, 0x75, 0x69, 0x72,
+	0x65, 0x64, 0x2e, 0x58, 0x01, 0x52, 0x21, 0x6c, 0x61, 0x72, 0x67, 0x65, 0x73, 0x74, 0x49, 0x6e,
+	0x76, 0x65, 0x73, 0x74, 0x6d, 0x65, 0x6e, 0x74, 0x41, 0x73, 0x73, 0x65, 0x74, 0x73, 0x50, 0x65,
+	0x72, 0x63, 0x65, 0x6e, 0x74, 0x61, 0x67, 0x65, 0x22, 0x30, 0x0a, 0x05, 0x59, 0x65, 0x73, 0x4e,
+	0x6f, 0x12, 0x19, 0x0a, 0x15, 0x59, 0x45, 0x53, 0x5f, 0x4e, 0x4f, 0x5f, 0x4e, 0x41, 0x5f, 0x55,
+	0x4e, 0x53, 0x50, 0x45, 0x43, 0x49, 0x46, 0x49, 0x45, 0x44, 0x10, 0x00, 0x12, 0x05, 0x0a, 0x01,
+	0x59, 0x10, 0x01, 0x12, 0x05, 0x0a, 0x01, 0x4e, 0x10, 0x02, 0x42, 0x3d, 0x5a, 0x3b, 0x67, 0x69,
+	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72,
+	0x64, 0x73, 0x2d, 0x65, 0x78, 0x63, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x62, 0x75, 0x66, 0x2d, 0x67, 0x6f, 0x2f, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64,
+	0x73, 0x2f, 0x6f, 0x70, 0x65, 0x6e, 0x2f, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
@@ -4654,7 +4586,7 @@ func file_standards_open_v1_RT000JTL0_proto_rawDescGZIP() []byte {
 }
 
 var file_standards_open_v1_RT000JTL0_proto_enumTypes = make([]protoimpl.EnumInfo, 5)
-var file_standards_open_v1_RT000JTL0_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_standards_open_v1_RT000JTL0_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_standards_open_v1_RT000JTL0_proto_goTypes = []interface{}{
 	(RT000JTL0_YesNo)(0), // 0: standards.open.v1.RT000JTL0.YesNo
 	(RT000JTL0_SubFundData_SFDRArticleClassification)(0),                               // 1: standards.open.v1.RT000JTL0.SubFundData.SFDRArticleClassification
@@ -4662,114 +4594,112 @@ var file_standards_open_v1_RT000JTL0_proto_goTypes = []interface{}{
 	(RT000JTL0_SubFundData_Article8SubfundResponses_SustainableInvestmentObjective)(0), // 3: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.SustainableInvestmentObjective
 	(RT000JTL0_SubFundData_Article9SubfundResponses_SustainableInvestmentObjective)(0), // 4: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.SustainableInvestmentObjective
 	(*RT000JTL0)(nil),                                      // 5: standards.open.v1.RT000JTL0
-	(*RT000JTL0Batch)(nil),                                 // 6: standards.open.v1.RT000JTL0_batch
-	(*RT000JTL0_SubFundData)(nil),                          // 7: standards.open.v1.RT000JTL0.SubFundData
-	(*RT000JTL0_TopInvestmentsSubfundsResponses)(nil),      // 8: standards.open.v1.RT000JTL0.TopInvestmentsSubfundsResponses
-	(*RT000JTL0_SubFundData_Article8SubfundResponses)(nil), // 9: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses
-	(*RT000JTL0_SubFundData_Article9SubfundResponses)(nil), // 10: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses
-	(*wrapperspb.Int32Value)(nil),                          // 11: google.protobuf.Int32Value
-	(*wrapperspb.DoubleValue)(nil),                         // 12: google.protobuf.DoubleValue
-	(*date.Date)(nil),                                      // 13: google.type.Date
+	(*RT000JTL0_SubFundData)(nil),                          // 6: standards.open.v1.RT000JTL0.SubFundData
+	(*RT000JTL0_TopInvestmentsSubfundsResponses)(nil),      // 7: standards.open.v1.RT000JTL0.TopInvestmentsSubfundsResponses
+	(*RT000JTL0_SubFundData_Article8SubfundResponses)(nil), // 8: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses
+	(*RT000JTL0_SubFundData_Article9SubfundResponses)(nil), // 9: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses
+	(*wrapperspb.Int32Value)(nil),                          // 10: google.protobuf.Int32Value
+	(*wrapperspb.DoubleValue)(nil),                         // 11: google.protobuf.DoubleValue
+	(*date.Date)(nil),                                      // 12: google.type.Date
 }
 var file_standards_open_v1_RT000JTL0_proto_depIdxs = []int32{
-	7,  // 0: standards.open.v1.RT000JTL0.subfunds:type_name -> standards.open.v1.RT000JTL0.SubFundData
-	8,  // 1: standards.open.v1.RT000JTL0.top_investments_subfunds:type_name -> standards.open.v1.RT000JTL0.TopInvestmentsSubfundsResponses
-	5,  // 2: standards.open.v1.RT000JTL0_batch.response:type_name -> standards.open.v1.RT000JTL0
-	11, // 3: standards.open.v1.RT000JTL0.SubFundData.subfund_cssf_code:type_name -> google.protobuf.Int32Value
-	1,  // 4: standards.open.v1.RT000JTL0.SubFundData.sfdr_article_classification:type_name -> standards.open.v1.RT000JTL0.SubFundData.SFDRArticleClassification
-	9,  // 5: standards.open.v1.RT000JTL0.SubFundData.article8_responses:type_name -> standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses
-	10, // 6: standards.open.v1.RT000JTL0.SubFundData.article9_responses:type_name -> standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses
-	11, // 7: standards.open.v1.RT000JTL0.TopInvestmentsSubfundsResponses.subfund_cssf_code:type_name -> google.protobuf.Int32Value
-	0,  // 8: standards.open.v1.RT000JTL0.TopInvestmentsSubfundsResponses.largest_investment_i_s_n_code_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	12, // 9: standards.open.v1.RT000JTL0.TopInvestmentsSubfundsResponses.largest_investment_assets_percentage:type_name -> google.protobuf.DoubleValue
-	0,  // 10: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.subfund_liquidated_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	13, // 11: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.subfund_start_date_liquidation_period:type_name -> google.type.Date
-	0,  // 12: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.sustainable_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	12, // 13: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.sustainable_investments_proportion1:type_name -> google.protobuf.DoubleValue
-	0,  // 14: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.environmental_objective_taxonomy_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	0,  // 15: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.environmental_objective_no_taxonomy_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	0,  // 16: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.social_objective_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	2,  // 17: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.e_and_s_characteristics:type_name -> standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.EAndSCharacteristic
-	0,  // 18: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.good_governance_practices_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	3,  // 19: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.sustainable_investments_objectives:type_name -> standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.SustainableInvestmentObjective
-	0,  // 20: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.principal_adverse_impact_consideration_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	12, // 21: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.aligned_e_s_characteristics_investments_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 22: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.sustainable_investments_proportion2:type_name -> google.protobuf.DoubleValue
-	12, // 23: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.ta_investments_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 24: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.other_environmental_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 25: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.social_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 26: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.other_e_s_characteristics_investments_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 27: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_proportion:type_name -> google.protobuf.DoubleValue
-	0,  // 28: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	0,  // 29: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	12, // 30: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 31: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 32: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 33: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 34: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 35: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 36: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 37: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 38: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 39: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 40: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 41: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 42: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 43: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 44: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 45: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 46: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 47: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 48: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.transitional_activities_investments_share:type_name -> google.protobuf.DoubleValue
-	12, // 49: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.enabling_activities_investments_share:type_name -> google.protobuf.DoubleValue
-	0,  // 50: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.reference_benchmark_designated_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	0,  // 51: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.reference_benchmark_isin_code_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	12, // 52: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.performance_compared_reference_benchmark:type_name -> google.protobuf.DoubleValue
-	0,  // 53: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.subfund_liquidated_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	0,  // 54: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	12, // 55: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_environmental_proportion1:type_name -> google.protobuf.DoubleValue
-	0,  // 56: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.environmental_objective_taxonomy_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	0,  // 57: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.environmental_objective_no_taxonomy_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	0,  // 58: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.social_objective_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	12, // 59: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_social_proportion1:type_name -> google.protobuf.DoubleValue
-	0,  // 60: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.good_governance_practices_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	4,  // 61: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_objectives:type_name -> standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.SustainableInvestmentObjective
-	0,  // 62: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.principal_adverse_impact_consideration_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	12, // 63: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_environmental_proportion2:type_name -> google.protobuf.DoubleValue
-	12, // 64: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_environmental_ta_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 65: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_environmental_other_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 66: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_social_proportion2:type_name -> google.protobuf.DoubleValue
-	12, // 67: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.not_sustainable_investments_proportion:type_name -> google.protobuf.DoubleValue
-	0,  // 68: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	0,  // 69: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	12, // 70: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 71: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 72: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 73: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 74: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 75: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 76: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 77: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 78: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 79: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 80: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 81: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 82: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 83: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 84: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 85: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 86: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 87: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
-	12, // 88: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.transitional_activities_investments_share:type_name -> google.protobuf.DoubleValue
-	12, // 89: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.enabling_activities_investments_share:type_name -> google.protobuf.DoubleValue
-	0,  // 90: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.reference_benchmark_designated_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	0,  // 91: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.reference_benchmark_isin_code_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
-	12, // 92: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.performance_compared_reference_benchmark:type_name -> google.protobuf.DoubleValue
-	93, // [93:93] is the sub-list for method output_type
-	93, // [93:93] is the sub-list for method input_type
-	93, // [93:93] is the sub-list for extension type_name
-	93, // [93:93] is the sub-list for extension extendee
-	0,  // [0:93] is the sub-list for field type_name
+	6,  // 0: standards.open.v1.RT000JTL0.subfunds:type_name -> standards.open.v1.RT000JTL0.SubFundData
+	7,  // 1: standards.open.v1.RT000JTL0.top_investments_subfunds:type_name -> standards.open.v1.RT000JTL0.TopInvestmentsSubfundsResponses
+	10, // 2: standards.open.v1.RT000JTL0.SubFundData.subfund_cssf_code:type_name -> google.protobuf.Int32Value
+	1,  // 3: standards.open.v1.RT000JTL0.SubFundData.sfdr_article_classification:type_name -> standards.open.v1.RT000JTL0.SubFundData.SFDRArticleClassification
+	8,  // 4: standards.open.v1.RT000JTL0.SubFundData.article8_responses:type_name -> standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses
+	9,  // 5: standards.open.v1.RT000JTL0.SubFundData.article9_responses:type_name -> standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses
+	10, // 6: standards.open.v1.RT000JTL0.TopInvestmentsSubfundsResponses.subfund_cssf_code:type_name -> google.protobuf.Int32Value
+	0,  // 7: standards.open.v1.RT000JTL0.TopInvestmentsSubfundsResponses.largest_investment_i_s_i_n_code_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	11, // 8: standards.open.v1.RT000JTL0.TopInvestmentsSubfundsResponses.largest_investment_assets_percentage:type_name -> google.protobuf.DoubleValue
+	0,  // 9: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.subfund_liquidated_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	12, // 10: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.subfund_start_date_liquidation_period:type_name -> google.type.Date
+	0,  // 11: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.sustainable_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	11, // 12: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.sustainable_investments_proportion1:type_name -> google.protobuf.DoubleValue
+	0,  // 13: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.environmental_objective_taxonomy_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	0,  // 14: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.environmental_objective_no_taxonomy_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	0,  // 15: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.social_objective_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	2,  // 16: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.e_and_s_characteristics:type_name -> standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.EAndSCharacteristic
+	0,  // 17: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.good_governance_practices_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	3,  // 18: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.sustainable_investments_objectives:type_name -> standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.SustainableInvestmentObjective
+	0,  // 19: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.principal_adverse_impact_consideration_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	11, // 20: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.aligned_e_s_characteristics_investments_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 21: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.sustainable_investments_proportion2:type_name -> google.protobuf.DoubleValue
+	11, // 22: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.ta_investments_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 23: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.other_environmental_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 24: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.social_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 25: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.other_e_s_characteristics_investments_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 26: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_proportion:type_name -> google.protobuf.DoubleValue
+	0,  // 27: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	0,  // 28: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	11, // 29: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 30: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 31: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 32: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 33: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 34: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 35: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 36: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 37: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 38: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 39: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 40: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 41: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 42: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 43: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 44: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 45: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 46: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.remaining_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 47: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.transitional_activities_investments_share:type_name -> google.protobuf.DoubleValue
+	11, // 48: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.enabling_activities_investments_share:type_name -> google.protobuf.DoubleValue
+	0,  // 49: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.reference_benchmark_designated_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	0,  // 50: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.reference_benchmark_isin_code_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	11, // 51: standards.open.v1.RT000JTL0.SubFundData.Article8SubfundResponses.performance_compared_reference_benchmark:type_name -> google.protobuf.DoubleValue
+	0,  // 52: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.subfund_liquidated_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	0,  // 53: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	11, // 54: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_environmental_proportion1:type_name -> google.protobuf.DoubleValue
+	0,  // 55: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.environmental_objective_taxonomy_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	0,  // 56: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.environmental_objective_no_taxonomy_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	0,  // 57: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.social_objective_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	11, // 58: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_social_proportion1:type_name -> google.protobuf.DoubleValue
+	0,  // 59: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.good_governance_practices_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	4,  // 60: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_objectives:type_name -> standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.SustainableInvestmentObjective
+	0,  // 61: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.principal_adverse_impact_consideration_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	11, // 62: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_environmental_proportion2:type_name -> google.protobuf.DoubleValue
+	11, // 63: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_environmental_ta_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 64: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_environmental_other_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 65: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.sustainable_investments_social_proportion2:type_name -> google.protobuf.DoubleValue
+	11, // 66: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.not_sustainable_investments_proportion:type_name -> google.protobuf.DoubleValue
+	0,  // 67: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	0,  // 68: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	11, // 69: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 70: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 71: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_incl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 72: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 73: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 74: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_incl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 75: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 76: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 77: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_incl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 78: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 79: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 80: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_excl_sovereign_bonds_turnover_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 81: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 82: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 83: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_excl_sovereign_bonds_capex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 84: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.fossil_gas_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 85: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.nuclear_energy_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 86: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.remaining_investments_excl_sovereign_bonds_opex_proportion:type_name -> google.protobuf.DoubleValue
+	11, // 87: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.transitional_activities_investments_share:type_name -> google.protobuf.DoubleValue
+	11, // 88: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.enabling_activities_investments_share:type_name -> google.protobuf.DoubleValue
+	0,  // 89: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.reference_benchmark_designated_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	0,  // 90: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.reference_benchmark_isin_code_indicator:type_name -> standards.open.v1.RT000JTL0.YesNo
+	11, // 91: standards.open.v1.RT000JTL0.SubFundData.Article9SubfundResponses.performance_compared_reference_benchmark:type_name -> google.protobuf.DoubleValue
+	92, // [92:92] is the sub-list for method output_type
+	92, // [92:92] is the sub-list for method input_type
+	92, // [92:92] is the sub-list for extension type_name
+	92, // [92:92] is the sub-list for extension extendee
+	0,  // [0:92] is the sub-list for field type_name
 }
 
 func init() { file_standards_open_v1_RT000JTL0_proto_init() }
@@ -4793,18 +4723,6 @@ func file_standards_open_v1_RT000JTL0_proto_init() {
 			}
 		}
 		file_standards_open_v1_RT000JTL0_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RT000JTL0Batch); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_standards_open_v1_RT000JTL0_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RT000JTL0_SubFundData); i {
 			case 0:
 				return &v.state
@@ -4816,7 +4734,7 @@ func file_standards_open_v1_RT000JTL0_proto_init() {
 				return nil
 			}
 		}
-		file_standards_open_v1_RT000JTL0_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_standards_open_v1_RT000JTL0_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RT000JTL0_TopInvestmentsSubfundsResponses); i {
 			case 0:
 				return &v.state
@@ -4828,7 +4746,7 @@ func file_standards_open_v1_RT000JTL0_proto_init() {
 				return nil
 			}
 		}
-		file_standards_open_v1_RT000JTL0_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_standards_open_v1_RT000JTL0_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RT000JTL0_SubFundData_Article8SubfundResponses); i {
 			case 0:
 				return &v.state
@@ -4840,7 +4758,7 @@ func file_standards_open_v1_RT000JTL0_proto_init() {
 				return nil
 			}
 		}
-		file_standards_open_v1_RT000JTL0_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_standards_open_v1_RT000JTL0_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RT000JTL0_SubFundData_Article9SubfundResponses); i {
 			case 0:
 				return &v.state
@@ -4859,7 +4777,7 @@ func file_standards_open_v1_RT000JTL0_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_standards_open_v1_RT000JTL0_proto_rawDesc,
 			NumEnums:      5,
-			NumMessages:   6,
+			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
